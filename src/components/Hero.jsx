@@ -110,7 +110,7 @@ export default function Hero({ onOpenQuote }) {
           </div>
 
           {/* Hero Right Interactive Showcase Card */}
-          <div className="lg:col-span-6 relative w-full h-full flex flex-col">
+          <div className="lg:col-span-6 relative w-full h-[520px] sm:h-[560px] flex flex-col shrink-0">
             
             {/* Soft Outer Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-amber-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
@@ -119,7 +119,7 @@ export default function Hero({ onOpenQuote }) {
             <div className="relative bg-slate-900/95 border border-slate-800/90 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl overflow-hidden h-full flex flex-col justify-between">
               
               {/* Card Top Header */}
-              <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-800 shrink-0">
                 <div className="flex items-center space-x-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
                   <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300 font-display">Flagship CNC Showcase</span>
@@ -129,8 +129,8 @@ export default function Hero({ onOpenQuote }) {
                 </span>
               </div>
 
-              {/* Product Preview Image Frame */}
-              <div className="relative my-3 flex-1 flex items-center justify-center bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden min-h-[280px] sm:min-h-[320px] shadow-inner">
+              {/* Product Preview Image Frame - LOCKED SIZE */}
+              <div className="relative my-3 h-[240px] sm:h-[280px] w-full flex items-center justify-center bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner shrink-0">
                 <img 
                   src={currentTool.image} 
                   alt={currentTool.name}
@@ -139,20 +139,21 @@ export default function Hero({ onOpenQuote }) {
               </div>
 
               {/* Product Info */}
-              <div className="space-y-2 text-left">
-                <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-lg font-bold text-white font-display truncate">{currentTool.name}</h3>
+              <div className="space-y-2 text-left flex-1 flex flex-col justify-center">
+                <div className="flex items-center justify-between gap-2 shrink-0">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display truncate h-7">{currentTool.name}</h3>
                   <span className="text-xs px-2.5 py-0.5 bg-slate-800 text-slate-300 rounded-md font-medium shrink-0 border border-slate-700">
                     {currentTool.type}
                   </span>
                 </div>
                 
-                <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                {/* Description with fixed height to prevent vertical shifting */}
+                <p className="text-xs text-slate-400 h-8 line-clamp-2 leading-relaxed shrink-0">
                   {currentTool.shortDescription}
                 </p>
 
                 {/* Specs Pill Summary */}
-                <div className="flex flex-wrap items-center gap-2 pt-1">
+                <div className="flex flex-wrap items-center gap-2 pt-1 shrink-0">
                   <span className="text-[11px] font-mono px-2 py-0.5 bg-slate-800/80 text-slate-300 rounded border border-slate-700/60">
                     Sub-micron Carbide
                   </span>
@@ -163,7 +164,7 @@ export default function Hero({ onOpenQuote }) {
               </div>
 
               {/* Slider Navigation & Direct Quote CTA */}
-              <div className="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div className="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between shrink-0">
                 <div className="flex space-x-1.5">
                   {flagshipTools.map((_, idx) => (
                     <button
