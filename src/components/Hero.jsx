@@ -110,7 +110,7 @@ export default function Hero({ onOpenQuote }) {
           </div>
 
           {/* Hero Right Interactive Showcase Card */}
-          <div className="lg:col-span-6 relative w-full h-[520px] sm:h-[560px] flex flex-col shrink-0">
+          <div className="lg:col-span-6 relative w-full h-[520px] sm:h-[560px] lg:h-full flex flex-col">
             
             {/* Soft Outer Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-amber-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
@@ -129,8 +129,8 @@ export default function Hero({ onOpenQuote }) {
                 </span>
               </div>
 
-              {/* Product Preview Image Frame - LOCKED SIZE */}
-              <div className="relative my-3 h-[240px] sm:h-[280px] w-full flex items-center justify-center bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner shrink-0">
+              {/* Product Preview Image Frame - Scales dynamically to match left column height */}
+              <div className="relative my-3 flex-1 w-full flex items-center justify-center bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
                 <img 
                   src={currentTool.image} 
                   alt={currentTool.name}
