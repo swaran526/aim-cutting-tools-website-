@@ -1,0 +1,332 @@
+[
+  {
+    "id": "scd-001",
+    "name": "Solid Carbide Drills",
+    "slug": "solid-carbide-drills",
+    "category": "Solid Carbide Drills",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_1.png",
+    "shortDescription": "High-performance internal coolant & solid carbide drills for deep hole precision drilling.",
+    "fullDescription": "ACT High-Performance Solid Carbide Drills are engineered for maximum chip evacuation, precise hole concentricity, and high-feed drilling in steel, stainless steel, cast iron, and hardened alloys up to 65 HRC. Available in 3xD, 5xD, 8xD, and 12xD L/D ratios with custom step-drill configurations built to order.",
+    "keyFeatures": [
+      "Micrograin carbide substrate for exceptional toughness",
+      "Special point geometry reducing axial thrust force",
+      "Internal coolant hole options for optimal chip clearing",
+      "AlTiN / TiAlN PVD multi-layer wear coating"
+    ],
+    "specs": {
+      "Diameter Range": "Ø1.0mm to Ø25.0mm",
+      "Shank Tolerance": "h6 precision shank",
+      "Point Angle": "135° / 140° Self-Centering Point",
+      "Helical Flute Angle": "30° High Helix",
+      "Substrate Grade": "Sub-micron Micrograin Tungsten Carbide (0.5µm)",
+      "Coating Options": "AlTiN, TiAlN, DLC, Uncoated for Aluminum"
+    },
+    "applications": ["Automotive Components", "Aerospace Parts", "Mold & Die Manufacturing", "General Machining"]
+  },
+  {
+    "id": "sce-002",
+    "name": "Solid Carbide Endmills",
+    "slug": "solid-carbide-endmills",
+    "category": "Solid Carbide Endmills",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_2.png",
+    "shortDescription": "2, 3, 4 & 6 flute high-speed milling cutters for roughing & finishing operations.",
+    "fullDescription": "Designed for maximum metal removal rates (MRR) and superior surface finish. ACT Solid Carbide Endmills feature variable helix angles to suppress vibration and chatter during heavy peripheral milling, slotting, and trochoidal milling operations.",
+    "keyFeatures": [
+      "Unequal flute spacing eliminates regenerative chatter",
+      "Rigid core diameter design for high side loads",
+      "Corner radius options (R0.2 to R3.0) to prevent chipping",
+      "High thermal stability coating for dry machining"
+    ],
+    "specs": {
+      "Flute Count": "2, 3, 4, 6 Flute Options",
+      "Diameter Range": "Ø1.0mm to Ø32.0mm",
+      "Helix Angle": "35° / 38° / 45° Variable Helix",
+      "Hardness Range": "Suitable for materials up to 68 HRC",
+      "Coating Options": "nACo Nanocomposite, AlTiN, Diamond Coating"
+    },
+    "applications": ["Hardened Steel Machining", "Stainless Steel", "Titanium Alloys", "Aluminum High-Speed Milling"]
+  },
+  {
+    "id": "bne-003",
+    "name": "Ballnose Endmills",
+    "slug": "ballnose-endmills",
+    "category": "Ballnose Endmills",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_3.png",
+    "shortDescription": "3D contouring & mold profile milling ball nose endmills with mirror flute finish.",
+    "fullDescription": "Precision ground 2-flute & 4-flute ball nose endmills built specifically for 3D mold cavity finishing, turbine blade profiling, and complex sculptured surface machining. Micro-mirror edge prep guarantees mirror surface finishes.",
+    "keyFeatures": [
+      "True spherical radius tolerance ±0.003mm",
+      "Deep neck clearance for tall rib & pocket milling",
+      "Sub-micron carbide grade preventing tip chipping",
+      "Heat-resistant PVD coating for high RPM finishing"
+    ],
+    "specs": {
+      "Radius Tolerance": "±0.003mm True Ball Radius",
+      "Diameter Range": "R0.5 (Ø1.0mm) to R10 (Ø20.0mm)",
+      "Neck Reach": "Standard & Extended Neck Clearance",
+      "Coating": "nACo Blue / AlTiN Multi-layer"
+    },
+    "applications": ["Plastic Injection Molds", "Forging Dies", "Medical Implants", "Aerospace Blades"]
+  },
+  {
+    "id": "scr-004",
+    "name": "Solid Carbide Reamers",
+    "slug": "solid-carbide-reamers",
+    "category": "Solid Carbide Reamers",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/reamer_clean.jpg",
+    "shortDescription": "H7/H6 ultra-precision sizing reamers for mirror hole finishing.",
+    "fullDescription": "ACT Solid Carbide Reamers deliver precise bore tolerances (H6/H7) with mirror surface finish (Ra < 0.2µm). Available in straight flute for blind holes and left-hand spiral for through-hole chip ejection.",
+    "keyFeatures": [
+      "H6 / H7 precision bore sizing in a single pass",
+      "Unequal flute indexing to prevent chatter marks",
+      "Custom decimal diameter manufacturing to 0.001mm steps",
+      "Internal coolant radial outlet options"
+    ],
+    "specs": {
+      "Diameter Tolerance": "H6 / H7 (+0.004/-0.000mm)",
+      "Flute Type": "Straight Flute / Left Hand Spiral 15°",
+      "Diameter Range": "Ø2.0mm to Ø20.0mm",
+      "Surface Roughness": "Ra < 0.2µm Mirror Finish"
+    },
+    "applications": ["Hydraulic Valve Bodies", "Automotive Engine Blocks", "Precision Bushings", "Fuel Injection Components"]
+  },
+  {
+    "id": "cbb-005",
+    "name": "Solid Carbide Boring Bars",
+    "slug": "solid-carbide-boring-bars",
+    "category": "Solid Carbide Boring Bars",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_5.png",
+    "shortDescription": "Anti-vibration heavy metal & solid carbide boring bars for deep internal turning.",
+    "fullDescription": "High-rigidity Solid Carbide Internal Boring Bars engineered for high L/D ratio internal threading, grooving, and profiling without chatter vibration. Up to 7xD overhang capability with internal coolant flow.",
+    "keyFeatures": [
+      "Solid carbide shank offering 3x modulus of elasticity over steel",
+      "Through-shank internal coolant port directly to cutting edge",
+      "Micro-boring inserts and solid carbide indexing heads",
+      "Suppresses chatter at deep bore overhang ratios up to 7xD"
+    ],
+    "specs": {
+      "Overhang Ratio": "Up to 7xD L/D ratio",
+      "Min Bore Diameter": "Ø3.0mm Micro Boring to Ø25mm",
+      "Shank Diameter": "Ø4.0mm to Ø25.0mm Precision Ground h6",
+      "Coolant System": "Axial Through-Coolant Hole"
+    },
+    "applications": ["Deep Internal Boring", "Internal Threading & Grooving", "Precision Sleeve Machining"]
+  },
+  {
+    "id": "hlm-006",
+    "name": "HoleMills & Interpolation Tools",
+    "slug": "holemills",
+    "category": "HoleMills",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_7.png",
+    "shortDescription": "Helical interpolation milling tools for large diameter hole generation without pre-drilling.",
+    "fullDescription": "ACT HoleMill Interpolation Cutters enable rapid hole opening from solid stock via CNC helical interpolation. Eliminates the need for multiple drill sizes and reduces spindle load on medium-power VMC machines.",
+    "keyFeatures": [
+      "Single tool generates multiple hole diameters",
+      "High feed helical entry geometry",
+      "Low cutting force requirement suitable for 40-taper machines",
+      "Multi-insert or solid carbide profile design"
+    ],
+    "specs": {
+      "Hole Diameter Range": "Ø15.0mm to Ø80.0mm Interpolated",
+      "Max Depth": "Up to 5xD Depth",
+      "Machining Strategy": "3D Helical Ramp & Trochoidal Entry"
+    },
+    "applications": ["Heavy Plate Drilling", "Flange Hole Machining", "Large Bearing Housing Bores"]
+  },
+  {
+    "id": "tsc-007",
+    "name": "T-Slot Cutters & Woodruff Tools",
+    "slug": "t-slot-cutters",
+    "category": "T-Slot Cutters",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_8.png",
+    "shortDescription": "Solid carbide & brazed T-slot cutters for machine table & keyway milling.",
+    "fullDescription": "Precision ground T-Slot cutters engineered with staggered teeth to clear chips efficiently during deep slot milling. Custom width and diameter geometries built to DIN 851 & ISO standards.",
+    "keyFeatures": [
+      "Staggered tooth design prevents chip packing",
+      "Precision side clearance relief grinding",
+      "Solid carbide head with neck reduction for deep slot reach",
+      "AlTiN coated for alloy steel slotting"
+    ],
+    "specs": {
+      "Slot Width": "1.5mm to 12.0mm Custom Widths",
+      "Cutter Diameter": "Ø10.0mm to Ø40.0mm",
+      "Shank Fit": "Weldon Flat / Cylindrical h6"
+    },
+    "applications": ["VMC Table T-Slots", "Woodruff Keyways", "Retaining Ring Grooves"]
+  },
+  {
+    "id": "bzr-008",
+    "name": "Brazed Tip Reamers & Tools",
+    "slug": "brazed-reamers",
+    "category": "Brazed Tip Reamers",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_9.png",
+    "shortDescription": "Carbide tipped brazed reamers for cost-effective large diameter reaming.",
+    "fullDescription": "Heavy-duty steel shank reamers with induction-brazed micrograin carbide cutting tips. Offers the wear resistance of solid carbide at a lower cost for diameters above Ø16mm.",
+    "keyFeatures": [
+      "High strength silver-brazed carbide tips",
+      "Regrindable multiple times to extend service life",
+      "Available with expanding blade diameter adjustment",
+      "Custom step and pilot reamer combinations"
+    ],
+    "specs": {
+      "Diameter Range": "Ø12.0mm to Ø60.0mm",
+      "Shank Material": "Alloy Tool Steel (HRC 42-45)",
+      "Carbide Tip Grade": "K20 / K30 ISO Grade"
+    },
+    "applications": ["Cast Iron Engine Blocks", "Heavy Industrial Valves", "Structural Steel Bore Finishing"]
+  },
+  {
+    "id": "rad-009",
+    "name": "Corner Radius & Chamfer Tools",
+    "slug": "radius-tools",
+    "category": "Radius Tools",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_11.png",
+    "shortDescription": "Front & back chamfering tools, corner rounding cutters & edge deburring mills.",
+    "fullDescription": "Complete range of solid carbide chamfer mills (60°, 90°, 120°) and concave corner rounding cutters. Enables clean 5-axis edge chamfering and deburring in a single CNC pass.",
+    "keyFeatures": [
+      "Double-ended chamfer mills for front and backside deburring",
+      "Precision ground concave radius profile R0.5 to R6.0",
+      "4-flute design for fast feed rate edge breaking",
+      "Vibration-free chatterless chamfering"
+    ],
+    "specs": {
+      "Chamfer Angles": "30°, 45° (90° included), 60°",
+      "Concave Radius": "R0.5, R1.0, R1.5, R2.0, R3.0, R5.0",
+      "Flutes": "3 & 4 Flutes"
+    },
+    "applications": ["Automotive Edge Deburring", "Aircraft Sheet Metal Chamfering", "Hole Countersinking"]
+  },
+  {
+    "id": "lop-010",
+    "name": "Lollipop & 5-Axis Cutters",
+    "slug": "lollipop-cutters",
+    "category": "Lollipop Cutters",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_12.webp",
+    "shortDescription": "220° spherical lollipop endmills for undercut milling & 5-axis port deburring.",
+    "fullDescription": "Specialized spherical cutters with neck diameter smaller than ball head diameter, allowing 220° to 300° wrap-around spherical machining for cylinder head intake ports, internal undercuts, and impellers.",
+    "keyFeatures": [
+      "220° Spherical ball head clearance",
+      "Slim neck design prevents collision in deep cavities",
+      "Ideal for multi-axis simultaneous contouring",
+      "Micro-grain carbide with friction-free PVD coating"
+    ],
+    "specs": {
+      "Ball Head Dia": "Ø2.0mm to Ø16.0mm",
+      "Wrap Angle": "220° Spherical Coverage",
+      "Neck Clearance": "Slim tapered neck for 5-axis clearance"
+    },
+    "applications": ["Engine Intake & Exhaust Ports", "Impeller Blisk Machining", "Medical Joint Implants"]
+  },
+  {
+    "id": "frm-011",
+    "name": "Custom Profile Form Tools",
+    "slug": "form-tools",
+    "category": "Form Tools",
+    "type": "Manufacturing",
+    "folder": "/assets/images",
+    "image": "/assets/images/our_products/1ST.png",
+    "shortDescription": "100% custom profile ground tools tailored to customer component drawings.",
+    "fullDescription": "ACT specializes in custom solid carbide form tools designed to machine complex multi-step, radius, and chamfer profiles in a single pass. Drastically reduces cycle times on CNC turning centers and VMCs.",
+    "keyFeatures": [
+      "Designed directly from customer 2D/3D CAD drawings",
+      "Optical profile projector ground to ±0.002mm contour accuracy",
+      "Combines drilling, step-counterboring, and chamfering in 1 tool",
+      "Full PVD re-coating support"
+    ],
+    "specs": {
+      "Contour Tolerance": "±0.002mm Contour Accuracy",
+      "Lead Time": "Fast 5-7 Day Custom Fabrication",
+      "Substrate": "Sub-micron Micrograin Carbide"
+    },
+    "applications": ["Mass Production Automotive Parts", "Custom Fastener Tooling", "Hydraulic Spool Valves"]
+  },
+  {
+    "id": "tth-012",
+    "name": "Turning Tool Holders & Inserts",
+    "slug": "turning-tool-holders",
+    "category": "Turning Tool Holders",
+    "type": "Trading",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_20.jpg",
+    "shortDescription": "CNC Lathe external & internal turning toolholders, boring bars, and carbide inserts.",
+    "fullDescription": "Complete trading inventory of ISO standard CNC lathe tool holders (PCLNR, SDJCR, SER, SIR), parting/grooving blocks, and indexable carbide inserts (CNMG, DNMG, WNMG, CCMT, VBMT) from leading brands.",
+    "keyFeatures": [
+      "Precision heat-treated steel shank holders",
+      "High clamping rigidity for heavy rough turning",
+      "PVD & CVD coated carbide insert grades for steel/stainless",
+      "Ready stock in Bangalore warehouse"
+    ],
+    "specs": {
+      "Holder Shank": "12x12mm to 32x32mm Square Shank",
+      "Insert Types": "CNMG 1204, DNMG 1506, WNMG 0804, CCMT 09T3",
+      "Clamping System": "Lever Lock / Screw Clamp"
+    },
+    "applications": ["CNC Lathe Turning", "External Facing & Threading", "Parting & Grooving"]
+  },
+  {
+    "id": "fmc-013",
+    "name": "Indexable Milling Cutters",
+    "slug": "milling-cutters",
+    "category": "Milling Cutters",
+    "type": "Trading",
+    "folder": "/assets/images",
+    "image": "/assets/images/hero_21.jpg",
+    "shortDescription": "Face mills, shoulder mills & high-feed indexable milling bodies with carbide inserts.",
+    "fullDescription": "Industrial trading portfolio of 45° face milling cutters, 90° square shoulder mills (APMT 1135 / 1604), and high-feed button mills (RDMT) for heavy metal removal in large die blocks.",
+    "keyFeatures": [
+      "Nickel-plated anti-corrosion cutter bodies",
+      "Differential pitch insert spacing suppresses chatter",
+      "Internal air/coolant nozzle to each insert seat",
+      "High metal removal rates at elevated feeds"
+    ],
+    "specs": {
+      "Cutter Diameter": "Ø40mm to Ø250mm Face Mills",
+      "Insert Geometry": "APMT 1135, APMT 1604, RPMT 1204, LNMU 0303",
+      "Arbor Fit": "BT40 / BT50 / Shell Mill Arbor"
+    },
+    "applications": ["Large Block Squaring", "Face Milling", "Heavy Die & Mold Roughing"]
+  },
+  {
+    "id": "met-014",
+    "name": "Measuring Instruments & Metrology",
+    "slug": "measuring-instruments",
+    "category": "Measuring Instruments",
+    "type": "Trading",
+    "folder": "/assets/images",
+    "image": "/assets/images/2.png",
+    "shortDescription": "Digital Vernier calipers, micrometers, dial indicators & bore gauges for QC inspection.",
+    "fullDescription": "Authorized supplier of precision metrology instruments including IP67 Digital Calipers (0-150mm, 0-300mm), Outside Micrometers (0.001mm accuracy), Dial Bore Gauges, and Height Gauges for machine shop quality control.",
+    "keyFeatures": [
+      "IP67 Coolant-proof digital calipers",
+      "Calibration certificates provided",
+      "Stainless steel hardened measuring jaws",
+      "Mitutoyo & Baker equivalent precision quality"
+    ],
+    "specs": {
+      "Resolution": "0.01mm / 0.001mm Digital Resolution",
+      "Measuring Range": "0-150mm, 0-200mm, 0-300mm, 0-600mm",
+      "Protection Rating": "IP67 Water & Oil Proof"
+    },
+    "applications": ["Machine Shop Quality Control", "First-Article Inspection", "Precision Bore Measurement"]
+  }
+]

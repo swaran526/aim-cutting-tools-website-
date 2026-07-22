@@ -1,0 +1,79 @@
+{
+  "name": "AIM CUTTING TOOLS (ACT)",
+  "shortName": "ACT",
+  "formerName": "AIM Cutting Tools",
+  "founder": "Mr. Arun Kumar J.",
+  "foundedYear": 2016,
+  "tagline": "Precision Carbide Tooling. Manufactured to Perform.",
+  "description": "AIM CUTTING TOOLS (ACT) is a premier manufacturer of Carbide Round Tools and trusted industrial trader based in Peenya 2nd Stage, Bangalore. Specializing in high-precision Solid Carbide Drills, Endmills, Reamers, Custom Form Tools, and professional resharpening & coating services.",
+  "contact": {
+    "phonePrimary": "9916479833",
+    "phoneSecondary": "9035151475",
+    "phoneDisplay": "+91 99164 79833 / +91 90351 51475",
+    "email": "act.blr2016@gmail.com",
+    "address": "#4A, 12th Cross, Balaji Nagar, Thigalarapalya Main Road, Near Exam Center, Opp Road, Peenya 2nd Stage, Bangalore - 560058, Karnataka, India",
+    "area": "Peenya 2nd Stage",
+    "city": "Bangalore",
+    "pincode": "560058",
+    "state": "Karnataka",
+    "country": "India",
+    "workingHours": "Mon - Sat: 8:30 AM - 7:30 PM",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8777085721114!2d77.5085343!3d13.0434771!2m3!1f00!2f00!3f00!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d12bc20dfd1%3A0xa638faad4269a8b1!2sThigalarapalya%20Main%20Rd%2C%20Peenya%202nd%20Stage%2C%20Bengaluru%2C%20Karnataka%20560058!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  },
+  "rating": {
+    "score": 4.9,
+    "maxScore": 5.0,
+    "reviewsCount": 142,
+    "satisfactionPercentage": 99.4,
+    "summaryText": "Highly rated by leading precision engineering & machining workshops across India."
+  },
+  "stats": [
+    { "label": "Established", "value": "2016", "sub": "Founder: Mr. Arun Kumar J." },
+    { "label": "Precision Tolerances", "value": "±0.002mm", "sub": "Micron-level accuracy" },
+    { "label": "Product Categories", "value": "14+", "sub": "Round tools & tooling accessories" },
+    { "label": "Customer Satisfaction", "value": "99.4%", "sub": "Easily editable rating data" }
+  ],
+  "manufacturingSpecialties": [
+    "Solid Carbide Drills",
+    "Solid Carbide Endmills",
+    "Ballnose Endmills",
+    "Solid Carbide Reamers",
+    "Solid Carbide Boring Bars",
+    "HoleMills",
+    "T-Slot Cutters",
+    "Brazed Reamers",
+    "Radius Tools",
+    "Lollipop Cutters",
+    "Form Tools (built to customer requirement)"
+  ],
+  "tradingItems": [
+    "Turning Tool Holders (with Inserts)",
+    "Milling Cutters",
+    "Measuring Instruments (Micrometers, Calipers, Height Gauges, Dial Indicators, Gauge Blocks)",
+    "Tooling Accessories (Collets, BT/CAT/ISO Tool Holder Shanks, Arbors, Wrenches)",
+    "Spares, Inserts, Taps, Jaws, U-Drills, VMC CNC Tooling Accessories"
+  ],
+  "services": [
+    {
+      "id": "resharpening",
+      "title": "Precision Resharpening",
+      "subtitle": "Restore Original Geometry & Extend Tool Life",
+      "description": "High-precision CNC resharpening service for all carbide round tools. Restores razor-sharp cutting edges to original manufacturer specifications, cutting tooling replacement costs by up to 60%.",
+      "icon": "RotateCcw"
+    },
+    {
+      "id": "reconditioning",
+      "title": "Tool Reconditioning",
+      "subtitle": "Complete Geometric Reconstruction",
+      "description": "Full end-to-end reconditioning of worn or damaged tools. Includes profile regrinding, relief angle correction, edge prepping, and neck reduction to restore optimal chip evacuation.",
+      "icon": "Wrench"
+    },
+    {
+      "id": "coating",
+      "title": "PVD / CVD Hard Coating",
+      "subtitle": "Advanced Thermal & Wear Barrier Coatings",
+      "description": "State-of-the-art PVD and CVD coatings (TiAlN, AlTiN, DLC, nACo) tailored to your target material (Steel, Stainless, Hardened Dies, Aluminum, Titanium) for maximum heat resistance and speed.",
+      "icon": "Layers"
+    }
+  ]
+}

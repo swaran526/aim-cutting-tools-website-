@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Site Pages -->
+  <url>
+    <loc>https://aimcuttingtools.com/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://aimcuttingtools.com/about</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aimcuttingtools.com/products</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aimcuttingtools.com/services</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aimcuttingtools.com/contact</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Category Taxonomy Pages -->
+  <url><loc>https://aimcuttingtools.com/products/solid-carbide-endmills</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/solid-carbide-drills</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/ballnose-endmills</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/precision-carbide-reamers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/custom-form-tools</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/boring-bars-holemills</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/t-slot-side-face-cutters</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/vmc-tool-holders-arbors</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/cnc-turning-toolholders</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/carbide-inserts-spares</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/hss-carbide-taps</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/precision-collets-chucks</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/metrology-measuring-instruments</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aimcuttingtools.com/products/special-radius-lollipop-cutters</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

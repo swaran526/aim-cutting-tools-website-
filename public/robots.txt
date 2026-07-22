@@ -1,0 +1,6 @@
+# Robots.txt for AIM CUTTING TOOLS (ACT)
+User-agent: *
+Allow: /
+
+# Sitemap Location for Google Search Console & Bing Webmaster Tools
+Sitemap: https://aimcuttingtools.com/sitemap.xml
