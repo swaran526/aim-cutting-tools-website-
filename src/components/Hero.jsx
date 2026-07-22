@@ -130,11 +130,11 @@ export default function Hero({ onOpenQuote }) {
               </div>
 
               {/* Product Preview Image Frame - Scales dynamically to match left column height */}
-              <div className="relative my-3 flex-1 w-full flex items-center justify-center bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
+              <div className="relative my-3 flex-1 w-full bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
                 <img 
                   src={currentTool.image} 
                   alt={currentTool.name}
-                  className="w-full h-full object-cover rounded-xl transition-all duration-500 transform hover:scale-105 filter drop-shadow-xl"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl transition-all duration-500 transform hover:scale-105 filter drop-shadow-xl"
                 />
               </div>
 
