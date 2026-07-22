@@ -16,9 +16,9 @@ export default function Products({ onOpenQuote }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-5">
           
           {/* Trust Badge matching Hero */}
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
+          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md whitespace-nowrap">
             <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
-            <span className="text-slate-300">FULL CNC TOOLING TAXONOMY CATALOG</span>
+            <span className="text-slate-300">CNC Tooling Catalog</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">

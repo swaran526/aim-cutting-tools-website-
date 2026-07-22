@@ -43,7 +43,7 @@ export default function About({ onOpenQuote }) {
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-act-red/20 rounded-full filter blur-[140px] pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-5">
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
+          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md whitespace-nowrap">
             <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
             <span className="text-slate-300">EST. 2016 • PEENYA 2ND STAGE, BANGALORE</span>
           </div>
@@ -157,7 +157,7 @@ export default function About({ onOpenQuote }) {
       {/* 3. Factory Photo Gallery Grid matching Hero showcase style */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left space-y-8">
         <div className="max-w-2xl space-y-3">
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
+          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md whitespace-nowrap">
             <Factory className="w-4 h-4 text-act-red" />
             <span>INSIDE OUR PEENYA WORKSHOP</span>
           </div>

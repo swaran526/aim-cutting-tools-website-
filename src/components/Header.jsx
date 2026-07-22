@@ -103,8 +103,8 @@ export default function Header({ onOpenQuote }) {
                 e.target.src = "/assets/images/logo.png";
               }}
             />
-            <span className="text-base sm:text-2xl font-black font-display tracking-tight text-white leading-none whitespace-nowrap">
-              AIM <span className="text-act-red">CUTTING TOOLS</span>
+            <span className="text-base sm:text-2xl font-black font-display tracking-tight leading-none whitespace-nowrap logo-text-gradient">
+              AIM CUTTING TOOLS
             </span>
           </Link>
 

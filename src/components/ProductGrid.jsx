@@ -20,8 +20,12 @@ export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CN
   const displayProducts = limit ? filteredProducts.slice(0, limit) : filteredProducts;
 
   return (
-    <section className="py-16 bg-slate-950 text-slate-100 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-slate-950 text-slate-100 font-sans tech-grid-bg relative overflow-hidden">
+      
+      {/* Radial Ambient Red Lighting Glow matching other homepage sections */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-act-red/10 rounded-full filter blur-[140px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">

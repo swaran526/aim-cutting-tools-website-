@@ -98,7 +98,7 @@ export default function ProductDetail({ onOpenQuote }) {
                   {Object.entries(product.specs).map(([key, val], idx) => (
                     <div 
                       key={key} 
-                      className={`flex justify-between p-3.5 ${
+                      className={`flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 p-3.5 ${
                         idx % 2 === 0 ? 'bg-slate-900' : 'bg-slate-950'
                       }`}
                     >

@@ -123,6 +123,14 @@
 .bg-slate-950.text-white {
   color: #0F172A !important; /* Dark Heading Text (slate-100) */
 }
+.bg-slate-950 .text-slate-100,
+.bg-slate-900 .text-slate-100 {
+  color: #0F172A !important; /* High Contrast Dark Heading / Content Text */
+}
+.bg-slate-950 .text-slate-200,
+.bg-slate-900 .text-slate-200 {
+  color: #1E293B !important; /* High Contrast Heading Subtext */
+}
 .bg-slate-950 .text-slate-300,
 .bg-slate-900 .text-slate-300 {
   color: #334155 !important; /* High Contrast Dark Body Text (slate-300) */
@@ -132,7 +140,13 @@
   color: #475569 !important; /* Clear Slate Subtext */
 }
 
-/* 2. Heading, Span, Strong & Bold Tag Contrast Fixes */
+/* 2. Generic White Text Overrides inside Light backgrounds */
+.bg-slate-950 .text-white,
+.bg-slate-900 .text-white {
+  color: #0F172A !important; /* Force all standard white text to be dark slate */
+}
+
+/* 3. Heading Contrast Fixes (Force all headings to render in a stunning red-to-black gradient flow) */
 .bg-slate-950 h1.text-white,
 .bg-slate-950 h2.text-white,
 .bg-slate-950 h3.text-white,
@@ -144,22 +158,39 @@
 .bg-slate-900\/95 h3.text-white,
 .bg-slate-900\/90 h3.text-white,
 .bg-slate-950\/80 h3.text-white {
-  color: #E31E24 !important; /* Vibrant brand red for high contrast headings */
+  background-image: linear-gradient(to right, #E31E24 10%, #0F172A 90%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
 }
 
-.bg-slate-950\/90 span.text-slate-300,
-.bg-slate-950\/90 p.text-slate-300,
-.bg-slate-950\/80 p.text-slate-300,
-.bg-slate-950 span.text-white,
-.bg-slate-900 span.text-white,
-.bg-slate-950 b.text-white,
-.bg-slate-900 b.text-white,
-.bg-slate-950 strong.text-white,
-.bg-slate-900 strong.text-white {
-  color: #0F172A !important; /* Dark Heading / Metadata / Body highlight text */
+
+/* Stunning red-to-black gradient flow for the logo text */
+.logo-text-gradient {
+  background-image: linear-gradient(to right, #E31E24 20%, #0F172A 80%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: inline-block;
 }
 
-/* 3. Form Input & Controls Contrast Fixes */
+/* Make sure child spans inside headings inherit the parent's text gradient flow */
+.bg-slate-950 h1 span,
+.bg-slate-950 h2 span,
+.bg-slate-950 h3 span,
+.bg-slate-950 h4 span,
+.bg-slate-900 h1 span,
+.bg-slate-900 h2 span,
+.bg-slate-900 h3 span,
+.bg-slate-900 h4 span {
+  color: transparent !important;
+  background-image: none !important;
+  background: none !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* 4. Form Input & Controls Contrast Fixes */
 input.text-white,
 textarea.text-white,
 select.text-white,
@@ -169,7 +200,7 @@ input[type="email"].text-white {
   color: #0F172A !important; /* Dark text inside form fields */
 }
 
-/* 4. Chat Widget & Modal Contrast Fixes */
+/* 5. Chat Widget & Modal Contrast Fixes */
 .bg-slate-900 h4.text-white,
 .bg-slate-900\/95 span.text-white,
 .bg-slate-900 p.text-slate-200,
@@ -178,28 +209,23 @@ input[type="email"].text-white {
 }
 
 /* Ensure link text elements inside slate-900 cards are readable */
-.bg-slate-900 a.text-white,
-.bg-slate-950 a.text-white {
-  color: #0F172A !important;
-}
-
 .bg-slate-900 a.text-white:hover,
 .bg-slate-950 a.text-white:hover {
   color: #E31E24 !important; /* Hover state red */
 }
 
-/* 5. Button Hover State Contrast Fixes */
+/* 6. Button Hover State Contrast Fixes */
 .bg-slate-800:hover,
 .hover\:bg-slate-700:hover {
   color: #0F172A !important;
 }
 
-/* 6. Trading Badge Contrast Fix */
+/* 7. Trading Badge Contrast Fix */
 .text-amber-400 {
   color: #D97706 !important; /* Use dark amber-600/700 for readability */
 }
 
-/* 7. Reset and Protect elements inside actual colored Buttons, Badges, and popups */
+/* 8. Reset and Protect elements inside actual colored Buttons, Badges, and popups */
 .bg-act-red,
 .bg-act-red-dark,
 .bg-act-red-light,
@@ -224,5 +250,6 @@ input[type="email"].text-white {
 .text-emerald-400 {
   color: #10B981 !important; /* Keep green clear */
 }
+
 
 

@@ -6,11 +6,10 @@ import productsData from '../data/products.json';
 
 export default function Footer({ onOpenQuote }) {
   return (
-    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800/80 pt-12 sm:pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800/80 pt-12 sm:pt-16 pb-8 relative overflow-hidden tech-grid-bg">
       
-      {/* Subtle Decorative Red-Navy Corner Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-act-red/5 rounded-full filter blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-act-navy/40 rounded-full filter blur-3xl pointer-events-none"></div>
+      {/* Red Ambient Glow matching other sections */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-act-red/10 rounded-full filter blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -29,8 +28,8 @@ export default function Footer({ onOpenQuote }) {
                   e.target.src = "/assets/images/logo.png";
                 }}
               />
-              <span className="text-xl sm:text-2xl font-black font-display tracking-tight text-white leading-none">
-                AIM <span className="text-act-red">CUTTING TOOLS</span>
+              <span className="text-xl sm:text-2xl font-black font-display tracking-tight leading-none logo-text-gradient">
+                AIM CUTTING TOOLS
               </span>
             </Link>
             

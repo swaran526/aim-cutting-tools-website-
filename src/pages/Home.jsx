@@ -24,7 +24,7 @@ export default function Home({ onOpenQuote }) {
       <AboutSection onOpenQuote={onOpenQuote} />
 
       {/* Transition Device 2: Subtle Red Light Bleed */}
-      <div className="relative w-full h-12 bg-gradient-to-b from-slate-950 to-slate-900 overflow-hidden flex items-center justify-center pointer-events-none">
+      <div className="relative w-full h-12 bg-slate-950 overflow-hidden flex items-center justify-center pointer-events-none">
         <div className="w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
       </div>
 
