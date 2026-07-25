@@ -26,10 +26,10 @@ export default function Hero({ onOpenQuote }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-8 sm:pb-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          
+
           {/* Hero Left Copy Content */}
           <div className="lg:col-span-6 space-y-6 text-left flex flex-col justify-between">
-            
+
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md self-start whitespace-nowrap">
               <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse shrink-0"></span>
@@ -76,103 +76,81 @@ export default function Hero({ onOpenQuote }) {
               </div>
             </div>
 
-            {/* Action CTA Buttons */}
-            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button
-                onClick={onOpenQuote}
-                className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-3 group transform active:scale-95 cursor-pointer"
-              >
-                <span>Request Custom Quote</span>
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
+            {/* CTA Buttons & Sales Info Grouped */}
+            <div className="space-y-4 pt-1">
+              {/* Action CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <button
+                  onClick={onOpenQuote}
+                  className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-3 group transform active:scale-95 cursor-pointer"
+                >
+                  <span>Request Custom Quote</span>
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </button>
+                <Link
+                  to="/products"
+                  className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-2 text-center transform active:scale-95 cursor-pointer"
+                >
+                  <span>Explore Catalog</span>
+                </Link>
+              </div>
 
-              <Link
-                to="/products"
-                className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-base font-semibold rounded-xl border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center space-x-2 text-center shadow-lg"
-              >
-                <span>Explore Catalog (14+)</span>
-              </Link>
-            </div>
-
-            {/* Quick Sales Contact Line */}
-            <div className="pt-2 text-xs text-slate-300 flex flex-wrap items-center gap-y-1 gap-x-4">
-              <a 
-                href={`tel:${companyData.contact.phonePrimary}`} 
-                className="inline-flex items-center gap-1.5 text-slate-300 hover:text-act-red font-semibold transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-act-red" />
-                <span>Sales: {companyData.contact.phonePrimary}</span>
-              </a>
-              <span className="text-slate-700 hidden sm:inline">•</span>
-              <span className="text-slate-400">Founder: <strong className="text-slate-200">{companyData.founder}</strong></span>
+              {/* Quick Sales Contact Line */}
+              <div className="text-xs text-slate-300 flex flex-wrap items-center gap-y-1 gap-x-4 pt-0.5">
+                <a
+                  href={`tel:${companyData.contact.phonePrimary}`}
+                  className="inline-flex items-center gap-1.5 text-slate-300 hover:text-act-red font-semibold transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-act-red" />
+                  <span>Sales: {companyData.contact.phonePrimary}</span>
+                </a>
+                <span className="text-slate-700 hidden sm:inline">•</span>
+                <span className="text-slate-400">Founder: <strong className="text-slate-200">{companyData.founder}</strong></span>
+              </div>
             </div>
 
           </div>
 
           {/* Hero Right Interactive Showcase Card */}
-          <div className="lg:col-span-6 relative w-full h-[520px] sm:h-[560px] lg:h-full flex flex-col">
-            
+          <div className="lg:col-span-6 relative w-full h-[580px] sm:h-[620px] lg:h-full flex flex-col">
+
             {/* Soft Outer Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-blue-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
 
             {/* Card Frame - Red light border */}
             <div className="relative bg-slate-900/95 border border-act-red/35 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl overflow-hidden h-full flex flex-col justify-between">
-              
-              {/* Card Top Header */}
-              <div className="flex items-center justify-between pb-3 border-b border-slate-800 shrink-0">
-                <div className="flex items-center space-x-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
-                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300 font-display">Flagship CNC Showcase</span>
-                </div>
-                <span className="text-xs font-mono font-bold text-act-red bg-act-red/10 px-3 py-1 rounded-full border border-act-red/30">
-                  0{activeSlide + 1} / 0{flagshipTools.length}
-                </span>
-              </div>
 
               {/* Product Preview Image Frame - Scales dynamically to match left column height */}
-              <div className="relative my-2 flex-1 w-full bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
-                <img 
-                  src={currentTool.image} 
+              <div className="relative mt-0 mb-3 flex-1 w-full bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
+                <img
+                  src={currentTool.image}
                   alt={currentTool.name}
                   className="absolute inset-0 w-full h-full object-cover rounded-xl transition-all duration-500 transform hover:scale-105 filter drop-shadow-xl"
                 />
               </div>
 
               {/* Product Info - Pushed down, allowing image frame to use more space */}
-              <div className="space-y-1 text-left shrink-0 mt-2 mb-1">
+              <div className="space-y-1 text-left shrink-0 mt-1.5 mb-0">
                 <div className="flex items-center justify-between gap-2 shrink-0">
                   <h3 className="text-base sm:text-lg font-bold text-white font-display truncate h-7">{currentTool.name}</h3>
-                  <span className="text-xs px-2.5 py-0.5 bg-slate-800 text-slate-300 rounded-md font-medium shrink-0 border border-slate-700">
-                    {currentTool.type}
-                  </span>
                 </div>
-                
+
                 {/* Description with fixed height to prevent vertical shifting */}
                 <p className="text-xs text-slate-400 h-8 line-clamp-2 leading-relaxed shrink-0">
                   {currentTool.shortDescription}
                 </p>
 
-                {/* Specs Pill Summary */}
-                <div className="flex flex-wrap items-center gap-2 pt-0.5 shrink-0">
-                  <span className="text-[11px] font-mono px-2 py-0.5 bg-slate-800/80 text-slate-300 rounded border border-slate-700/60">
-                    Sub-micron Carbide
-                  </span>
-                  <span className="text-[11px] font-mono px-2 py-0.5 bg-slate-800/80 text-slate-300 rounded border border-slate-700/60">
-                    Custom Diameters
-                  </span>
-                </div>
               </div>
 
               {/* Slider Navigation & Direct Quote CTA */}
-              <div className="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between shrink-0">
+              <div className="mt-0.5 pt-1.5 border-t border-slate-800/60 flex items-center justify-between shrink-0">
                 <div className="flex space-x-1.5">
                   {flagshipTools.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveSlide(idx)}
-                      className={`h-2 rounded-full transition-all cursor-pointer ${
-                        idx === activeSlide ? 'w-6 bg-act-red' : 'w-2 bg-slate-700 hover:bg-slate-500'
-                      }`}
+                      className={`h-2 rounded-full transition-all cursor-pointer ${idx === activeSlide ? 'w-6 bg-act-red' : 'w-2 bg-slate-700 hover:bg-slate-500'
+                        }`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
                   ))}

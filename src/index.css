@@ -297,11 +297,6 @@ input[type="email"].text-white {
 main section.relative.bg-slate-950.text-center {
   padding-top: 2.5rem !important; /* Reduce from pt-16 (64px) to pt-10 (40px) */
   padding-bottom: 3.5rem !important;
-  background-color: #FFFFFF !important; /* Merge seamlessly with image background */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/images/background/tool.jpeg') !important;
-  background-size: contain !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
 }
 
 main .bg-slate-950.min-h-screen {
