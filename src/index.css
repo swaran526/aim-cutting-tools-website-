@@ -25,11 +25,11 @@
   background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: linear-gradient(to bottom, #E31E24, #0284c7) !important;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E31E24;
+  background: linear-gradient(to bottom, #FF3B42, #0ea5e9) !important;
 }
 
 /* Clean Modern Visual Accents */
@@ -147,27 +147,56 @@
 }
 
 /* 3. Heading Contrast Fixes (Force all headings to render in a stunning red-to-black gradient flow) */
-.bg-slate-950 h1.text-white,
-.bg-slate-950 h2.text-white,
-.bg-slate-950 h3.text-white,
-.bg-slate-950 h4.text-white,
-.bg-slate-900 h1.text-white,
-.bg-slate-900 h2.text-white,
-.bg-slate-900 h3.text-white,
-.bg-slate-900 h4.text-white,
-.bg-slate-900\/95 h3.text-white,
-.bg-slate-900\/90 h3.text-white,
-.bg-slate-950\/80 h3.text-white {
-  background-image: linear-gradient(to right, #E31E24 10%, #0F172A 90%) !important;
+[class*="bg-slate-950"] h1:has(span),
+[class*="bg-slate-950"] h1.text-white:has(span),
+[class*="bg-slate-950"] h2:has(span),
+[class*="bg-slate-950"] h2.text-white:has(span),
+[class*="bg-slate-950"] h3:has(span),
+[class*="bg-slate-950"] h3.text-white:has(span),
+[class*="bg-slate-950"] h4:has(span),
+[class*="bg-slate-950"] h4.text-white:has(span),
+[class*="bg-slate-900"] h1:has(span),
+[class*="bg-slate-900"] h1.text-white:has(span),
+[class*="bg-slate-900"] h2:has(span),
+[class*="bg-slate-900"] h2.text-white:has(span),
+[class*="bg-slate-900"] h3:has(span),
+[class*="bg-slate-900"] h3.text-white:has(span),
+[class*="bg-slate-900"] h4:has(span),
+[class*="bg-slate-900"] h4.text-white:has(span) {
+  color: #E31E24 !important;
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+[class*="bg-slate-950"] h1:not(:has(span)),
+[class*="bg-slate-950"] h1.text-white:not(:has(span)),
+[class*="bg-slate-950"] h2:not(:has(span)),
+[class*="bg-slate-950"] h2.text-white:not(:has(span)),
+[class*="bg-slate-950"] h3:not(:has(span)),
+[class*="bg-slate-950"] h3.text-white:not(:has(span)),
+[class*="bg-slate-950"] h4:not(:has(span)),
+[class*="bg-slate-950"] h4.text-white:not(:has(span)),
+[class*="bg-slate-900"] h1:not(:has(span)),
+[class*="bg-slate-900"] h1.text-white:not(:has(span)),
+[class*="bg-slate-900"] h2:not(:has(span)),
+[class*="bg-slate-900"] h2.text-white:not(:has(span)),
+[class*="bg-slate-900"] h3:not(:has(span)),
+[class*="bg-slate-900"] h3.text-white:not(:has(span)),
+[class*="bg-slate-900"] h4:not(:has(span)),
+[class*="bg-slate-900"] h4.text-white:not(:has(span)) {
+  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
+  display: inline-block;
 }
 
 
-/* Stunning red-to-black gradient flow for the logo text */
+/* Stunning red-to-blue gradient flow for the logo text */
 .logo-text-gradient {
-  background-image: linear-gradient(to right, #E31E24 20%, #0F172A 80%) !important;
+  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -175,19 +204,27 @@
 }
 
 /* Make sure child spans inside headings inherit the parent's text gradient flow */
-.bg-slate-950 h1 span,
-.bg-slate-950 h2 span,
-.bg-slate-950 h3 span,
-.bg-slate-950 h4 span,
-.bg-slate-900 h1 span,
-.bg-slate-900 h2 span,
-.bg-slate-900 h3 span,
-.bg-slate-900 h4 span {
-  color: transparent !important;
-  background-image: none !important;
-  background: none !important;
+[class*="bg-slate-950"] h1 span,
+[class*="bg-slate-950"] h1.text-white span,
+[class*="bg-slate-950"] h2 span,
+[class*="bg-slate-950"] h2.text-white span,
+[class*="bg-slate-950"] h3 span,
+[class*="bg-slate-950"] h3.text-white span,
+[class*="bg-slate-950"] h4 span,
+[class*="bg-slate-950"] h4.text-white span,
+[class*="bg-slate-900"] h1 span,
+[class*="bg-slate-900"] h1.text-white span,
+[class*="bg-slate-900"] h2 span,
+[class*="bg-slate-900"] h2.text-white span,
+[class*="bg-slate-900"] h3 span,
+[class*="bg-slate-900"] h3.text-white span,
+[class*="bg-slate-900"] h4 span,
+[class*="bg-slate-900"] h4.text-white span {
+  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
+  color: transparent !important;
+  display: inline !important;
 }
 
 /* 4. Form Input & Controls Contrast Fixes */
@@ -249,6 +286,11 @@ input[type="email"].text-white {
 /* Restore green colors */
 .text-emerald-400 {
   color: #10B981 !important; /* Keep green clear */
+}
+
+/* 9. Widen Container Limits to Reduce Left/Right Margins on Desktop */
+.max-w-7xl {
+  max-width: 1440px !important;
 }
 
 

@@ -15,7 +15,7 @@ export default function ProductDetail({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Breadcrumbs Navigation */}
-        <div className="flex items-center space-x-2 text-xs text-slate-400">
+        <div className="flex flex-wrap items-center gap-y-1 space-x-2 text-xs text-slate-400">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <span>/</span>
           <Link to="/products" className="hover:text-white transition-colors">Products</Link>
@@ -129,12 +129,15 @@ export default function ProductDetail({ onOpenQuote }) {
             </div>
 
             {/* Direct Workshop Contact Line */}
-            <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-2xl text-xs text-slate-300 flex items-center justify-between shadow-md">
+            <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-2xl text-xs text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md text-left">
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-act-red" />
-                <span>Peenya Sales Hotline: <strong className="text-white">{companyData.contact.phonePrimary}</strong></span>
+                <Phone className="w-4 h-4 text-act-red shrink-0" />
+                <span>Peenya Sales Hotline: <a href={`tel:${companyData.contact.phonePrimary}`} className="text-act-red font-bold hover:underline">{companyData.contact.phonePrimary}</a></span>
               </div>
-              <a href={`tel:${companyData.contact.phonePrimary}`} className="text-act-red font-bold hover:underline">Call Direct →</a>
+              <a href={`tel:${companyData.contact.phonePrimary}`} className="text-act-red font-bold hover:underline flex items-center gap-1">
+                <span>Call Direct</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </a>
             </div>
 
           </div>

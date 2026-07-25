@@ -27,7 +27,7 @@ export default function WhyChooseUs({ onOpenQuote }) {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-slate-950 text-white relative overflow-hidden tech-grid-bg">
+    <section className="py-10 sm:py-16 bg-slate-950 text-white relative overflow-hidden tech-grid-bg">
       
       {/* Radial Ambient Red Lighting Glow */}
       <div className="absolute top-1/3 -right-20 w-[550px] h-[550px] bg-act-red/10 rounded-full filter blur-[140px] pointer-events-none"></div>

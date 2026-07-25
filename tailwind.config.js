@@ -20,8 +20,8 @@ export default {
         act: {
           red: {
             DEFAULT: "#E31E24",
-            dark: "#B81217",
-            light: "#FF3B42",
+            dark: "#0284c7", // Premium light sky blue
+            light: "#0ea5e9", // Sky blue highlight
             glow: "rgba(227, 30, 36, 0.15)",
           },
           navy: {

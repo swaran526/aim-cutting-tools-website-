@@ -19,12 +19,12 @@ export default function Hero({ onOpenQuote }) {
   const currentTool = flagshipTools[activeSlide];
 
   return (
-    <section className="relative w-full min-h-[92vh] bg-slate-950 text-white overflow-hidden flex flex-col justify-center tech-grid-bg">
+    <section className="relative w-full min-h-[82vh] bg-slate-950 text-white overflow-hidden flex flex-col justify-center tech-grid-bg">
 
       {/* Radial Ambient Red Lighting Glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-act-red/10 rounded-full filter blur-[150px] pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-12 sm:pb-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-8 sm:pb-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
           
           {/* Hero Left Copy Content */}
@@ -113,7 +113,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="lg:col-span-6 relative w-full h-[520px] sm:h-[560px] lg:h-full flex flex-col">
             
             {/* Soft Outer Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-amber-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-blue-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
 
             {/* Card Frame - Red light border */}
             <div className="relative bg-slate-900/95 border border-act-red/35 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl overflow-hidden h-full flex flex-col justify-between">
@@ -206,7 +206,7 @@ export default function Hero({ onOpenQuote }) {
       {/* Hero Bottom Trust Bar */}
       <div className="w-full bg-slate-950 border-t border-b border-slate-800/80 py-5 relative z-10 tech-grid-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-slate-800/80">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:divide-x divide-slate-800/80">
             <div className="px-2">
               <p className="text-xl sm:text-2xl font-extrabold font-mono text-act-red">±0.002 mm</p>
               <p className="text-xs text-slate-300 font-medium mt-0.5">Manufacturing Tolerance</p>

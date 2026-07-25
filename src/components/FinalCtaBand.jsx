@@ -4,7 +4,7 @@ import companyData from '../data/company.json';
 
 export default function FinalCtaBand({ onOpenQuote }) {
   return (
-    <section className="w-full bg-slate-950 text-white py-16 sm:py-24 px-4 relative overflow-hidden border-t border-slate-800/80 tech-grid-bg">
+    <section className="w-full bg-slate-950 text-white py-10 sm:py-16 px-4 relative overflow-hidden border-t border-slate-800/80 tech-grid-bg">
       
       {/* Radial Ambient Red and Blue Lighting Glows matching Hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-act-red/20 rounded-full filter blur-[150px] pointer-events-none"></div>

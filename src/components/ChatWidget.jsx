@@ -87,11 +87,11 @@ export default function ChatWidget({ onOpenQuote }) {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 font-sans flex flex-col items-end">
       
       {/* Chat Window Panel */}
       {isOpen && (
-        <div className="mb-4 w-[90vw] max-w-[360px] sm:w-[395px] bg-slate-900 border border-slate-700/90 rounded-3xl shadow-2xl overflow-hidden flex flex-col backdrop-blur-xl animate-fade-in-scale">
+        <div className="mb-4 w-[calc(100vw-32px)] sm:w-[395px] max-w-[360px] sm:max-w-none bg-slate-900 border border-slate-700/90 rounded-3xl shadow-2xl overflow-hidden flex flex-col backdrop-blur-xl animate-fade-in-scale">
           
           {/* Chat Header */}
           <div className="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">

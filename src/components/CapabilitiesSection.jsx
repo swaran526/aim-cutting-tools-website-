@@ -58,7 +58,7 @@ export default function CapabilitiesSection({ onOpenQuote }) {
   const activeService = serviceSteps[activeTab];
 
   return (
-    <section className="py-16 sm:py-24 bg-slate-950 text-white relative border-y border-slate-800/80 overflow-hidden tech-grid-bg">
+    <section className="py-10 sm:py-16 bg-slate-950 text-white relative border-y border-slate-800/80 overflow-hidden tech-grid-bg">
       
       {/* Radial Ambient Red Lighting Glow */}
       <div className="absolute top-1/2 left-1/4 w-[550px] h-[550px] bg-act-red/10 rounded-full filter blur-[150px] pointer-events-none"></div>

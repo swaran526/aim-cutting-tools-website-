@@ -5,7 +5,7 @@ import companyData from '../data/company.json';
 
 export default function AboutSection({ onOpenQuote }) {
   return (
-    <section className="py-16 sm:py-24 bg-slate-950 text-white relative overflow-hidden tech-grid-bg">
+    <section className="py-10 sm:py-16 bg-slate-950 text-white relative overflow-hidden tech-grid-bg">
       
       {/* Radial Ambient Red Lighting Glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-act-red/10 rounded-full filter blur-[150px] pointer-events-none"></div>

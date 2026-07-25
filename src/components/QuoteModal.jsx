@@ -168,14 +168,14 @@ export default function QuoteModal({ isOpen, onClose, selectedProduct = null }) 
               ></textarea>
             </div>
 
-            <div className="pt-2 flex items-center justify-between border-t border-slate-800">
-              <div className="text-xs text-slate-400 flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-act-red" />
-                <span>Need urgent assistance? Call: <b>{companyData.contact.phonePrimary}</b></span>
+            <div className="pt-3 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center sm:justify-between border-t border-slate-800">
+              <div className="text-xs text-slate-400 flex items-center justify-center sm:justify-start gap-1.5">
+                <Phone className="w-3.5 h-3.5 text-act-red shrink-0" />
+                <span>Need urgent assistance? Call: <a href={`tel:${companyData.contact.phonePrimary}`} className="text-act-red font-bold hover:underline">{companyData.contact.phonePrimary}</a></span>
               </div>
               <button 
                 type="submit"
-                className="px-6 py-2.5 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white font-semibold rounded-lg transition-all shadow-lg shadow-act-red/25 flex items-center space-x-2 text-sm"
+                className="px-6 py-3 sm:py-2.5 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white font-semibold rounded-xl transition-all shadow-lg shadow-act-red/25 flex items-center justify-center space-x-2 text-sm w-full sm:w-auto"
               >
                 <Send className="w-4 h-4" />
                 <span>Submit Quote Request</span>

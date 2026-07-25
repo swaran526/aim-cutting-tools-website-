@@ -6,7 +6,7 @@ import productsData from '../data/products.json';
 
 export default function Footer({ onOpenQuote }) {
   return (
-    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800/80 pt-12 sm:pt-16 pb-8 relative overflow-hidden tech-grid-bg">
+    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800/80 pt-10 sm:pt-12 pb-6 relative overflow-hidden tech-grid-bg">
       
       {/* Red Ambient Glow matching other sections */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-act-red/10 rounded-full filter blur-[120px] pointer-events-none"></div>
