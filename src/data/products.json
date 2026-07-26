@@ -266,8 +266,8 @@
     "slug": "turning-tool-holders",
     "category": "Turning Tool Holders",
     "type": "Trading",
-    "folder": "/assets/images",
-    "image": "/assets/images/hero_20.jpg",
+    "folder": "/assets/images/our_products/Turning Tool Holders & Inserts",
+    "image": "/assets/images/our_products/Turning Tool Holders & Inserts/1.jpeg",
     "shortDescription": "CNC Lathe external & internal turning toolholders, boring bars, and carbide inserts.",
     "fullDescription": "Complete trading inventory of ISO standard CNC lathe tool holders (PCLNR, SDJCR, SER, SIR), parting/grooving blocks, and indexable carbide inserts (CNMG, DNMG, WNMG, CCMT, VBMT) from leading brands.",
     "keyFeatures": [
@@ -289,8 +289,8 @@
     "slug": "milling-cutters",
     "category": "Milling Cutters",
     "type": "Trading",
-    "folder": "/assets/images",
-    "image": "/assets/images/hero_21.jpg",
+    "folder": "/assets/images/our_products/Indexable Milling Cutters",
+    "image": "/assets/images/our_products/Indexable Milling Cutters/1.jpeg",
     "shortDescription": "Face mills, shoulder mills & high-feed indexable milling bodies with carbide inserts.",
     "fullDescription": "Industrial trading portfolio of 45° face milling cutters, 90° square shoulder mills (APMT 1135 / 1604), and high-feed button mills (RDMT) for heavy metal removal in large die blocks.",
     "keyFeatures": [
@@ -312,8 +312,8 @@
     "slug": "measuring-instruments",
     "category": "Measuring Instruments",
     "type": "Trading",
-    "folder": "/assets/images",
-    "image": "/assets/images/2.png",
+    "folder": "/assets/images/our_products/Measuring Instruments & Metrology",
+    "image": "/assets/images/our_products/Measuring Instruments & Metrology/1.jpeg",
     "shortDescription": "Digital Vernier calipers, micrometers, dial indicators & bore gauges for QC inspection.",
     "fullDescription": "Authorized supplier of precision metrology instruments including IP67 Digital Calipers (0-150mm, 0-300mm), Outside Micrometers (0.001mm accuracy), Dial Bore Gauges, and Height Gauges for machine shop quality control.",
     "keyFeatures": [
@@ -328,5 +328,52 @@
       "Protection Rating": "IP67 Water & Oil Proof"
     },
     "applications": ["Machine Shop Quality Control", "First-Article Inspection", "Precision Bore Measurement"]
+  },
+  {
+    "id": "abt-015",
+    "name": "Adjustable Boring Tool",
+    "slug": "adjustable-boring-tool",
+    "category": "Adjustable Boring Tool",
+    "type": "Manufacturing",
+    "folder": "/assets/images/our_products/adjustable boring tool",
+    "image": "/assets/images/our_products/adjustable boring tool/1.jpeg",
+    "shortDescription": "Fine adjustable solid carbide boring tools for precise diameter control in CNC machining centers.",
+    "fullDescription": "ACT Adjustable Boring Tools feature a precision micrometric adjustment mechanism that allows fine diameter tuning (0.001mm increments) without removing the tool from the spindle. Ideal for bore tolerance requirements of H6/H7 in VMC and HMC operations.",
+    "keyFeatures": [
+      "Micrometric fine adjustment in 0.001mm increments",
+      "Anti-backlash locking mechanism for repeatability",
+      "Solid carbide cartridge for superior vibration damping",
+      "Compatible with standard BT40/BT50/HSK tool holders"
+    ],
+    "specs": {
+      "Adjustment Range": "±0.5mm fine radial adjustment",
+      "Boring Diameter Range": "Ø6.0mm to Ø120.0mm",
+      "Repeatability": "±0.001mm bore diameter repeatability",
+      "Shank Interface": "BT40 / BT50 / HSK63A"
+    },
+    "applications": ["Precision Bore Finishing", "Hydraulic Manifold Bores", "Automotive Engine Cylinders", "Aerospace Component Bores"]
+  },
+  {
+    "id": "tac-016",
+    "name": "Tooling Accessories",
+    "slug": "tooling-accessories",
+    "category": "Tooling Accessories",
+    "type": "Trading",
+    "folder": "/assets/images/our_products/tooling accessiories",
+    "image": "/assets/images/our_products/tooling accessiories/2.jpeg",
+    "shortDescription": "CNC tooling accessories including collets, shrink fit holders, pull studs & tool setting gauges.",
+    "fullDescription": "Complete range of CNC machining center tooling accessories including ER collets (ER11 to ER40), precision shrink fit holders, BT40/BT50 pull studs (retention knobs), hydraulic chucks, and tool presetting gauges. All items available from Bangalore warehouse stock.",
+    "keyFeatures": [
+      "ER collet series with G2.5 balance certification",
+      "BT / CAT / HSK pull studs in alloy steel",
+      "Hydraulic chuck for vibration-free high-RPM holding",
+      "Tool presetting equipment for offline setup"
+    ],
+    "specs": {
+      "Collet Range": "ER11, ER16, ER20, ER25, ER32, ER40",
+      "Pull Stud Types": "BT30, BT40, BT50, CAT40, CAT50",
+      "Chuck Types": "ER Collet Chuck, Hydraulic Chuck, Shrink Fit"
+    },
+    "applications": ["CNC VMC Tool Holding", "High-Speed Spindle Tooling", "Precision Micro-Tool Clamping", "Production Line Toolroom Stocking"]
   }
 ]
