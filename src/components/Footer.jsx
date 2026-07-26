@@ -82,10 +82,15 @@ export default function Footer({ onOpenQuote }) {
               Peenya Plant Contact
             </h4>
             <div className="space-y-3 text-xs text-slate-300">
-              <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-act-red shrink-0 mt-0.5" />
+              <a 
+                href={companyData.contact.googleMapsUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-start space-x-2.5 hover:text-act-red transition-colors cursor-pointer group"
+              >
+                <MapPin className="w-4 h-4 text-act-red shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span>{companyData.contact.address}</span>
-              </div>
+              </a>
               <div className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-act-red shrink-0" />
                 <a href={`tel:${companyData.contact.phonePrimary}`} className="text-white hover:text-act-red font-semibold">{companyData.contact.phonePrimary}</a>

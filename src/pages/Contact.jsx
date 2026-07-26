@@ -74,13 +74,21 @@ export default function Contact({ onOpenQuote }) {
                 </div>
 
                 {/* Address Item */}
-                <div className="p-3 bg-slate-950/90 rounded-2xl border border-slate-800 flex items-start space-x-3 shadow-inner">
-                  <MapPin className="w-5 h-5 text-act-red shrink-0 mt-0.5" />
+                <a 
+                  href={companyData.contact.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-950/90 rounded-2xl border border-slate-800 flex items-start space-x-3 shadow-inner hover:border-act-red/50 transition-all cursor-pointer group"
+                >
+                  <MapPin className="w-5 h-5 text-act-red shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
-                    <p className="font-bold text-white text-sm mb-1">Plant Address</p>
-                    <p className="text-slate-300 leading-relaxed">{companyData.contact.address}</p>
+                    <p className="font-bold text-white text-sm mb-1 flex items-center gap-1.5">
+                      <span>Plant Address</span>
+                      <span className="text-[10px] text-act-red font-mono font-normal group-hover:underline">(Open in Maps ↗)</span>
+                    </p>
+                    <p className="text-slate-300 leading-relaxed text-xs">{companyData.contact.address}</p>
                   </div>
-                </div>
+                </a>
 
                 {/* Hours Item */}
                 <div className="p-3 bg-slate-950/90 rounded-2xl border border-slate-800 flex items-start space-x-3 shadow-inner">
@@ -132,7 +140,7 @@ export default function Contact({ onOpenQuote }) {
           <div className="industrial-card lg:h-[460px] h-64 sm:h-96 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 relative">
             <iframe
               title="AIM CUTTING TOOLS Peenya Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.039247654321!2d77.5134!3d13.0321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAxJzU1LjYiTiA3N8KwMzA0OC4yIkU!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+              src={companyData.contact.googleMapsEmbedUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -28,22 +28,22 @@ export default function WhyChooseUs({ onOpenQuote }) {
   return (
     <section className="py-8 sm:py-12 bg-slate-950 text-white relative overflow-hidden font-sans tech-grid-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Left Column: Animated Focal Advantage Card */}
           <div className="lg:col-span-5 relative flex flex-col h-full">
             <div className="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden flex-1 flex flex-col justify-between min-h-[360px] sm:min-h-[420px] group hover:border-act-red/60 hover:shadow-act-red/10 transition-all duration-500">
-              
+
               {/* Animated Background Image Watermark */}
               <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
-                <img 
-                  src="/assets/images/our_story_1.png" 
-                  alt="AIM Cutting Tools Facility" 
-                  className="w-full h-full object-cover opacity-30 filter brightness-75 transform group-hover:scale-110 transition-transform duration-700"
+                <img
+                  src="/assets/images/about-us/why-us/1.jpg"
+                  alt="AIM Cutting Tools Facility"
+                  className="w-full h-full object-cover opacity-55 filter brightness-90 transform group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = "/assets/images/logo.png";
+                    e.target.src = "/assets/images/about-us/manufacturing-gallery/our_story_1.png";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>
@@ -51,7 +51,7 @@ export default function WhyChooseUs({ onOpenQuote }) {
 
               {/* Card Content */}
               <div className="relative z-10 flex-1 flex flex-col justify-between h-full space-y-6">
-                
+
                 <div className="space-y-4 text-left">
                   <div className="flex flex-wrap gap-2">
                     <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-act-red/20 border border-act-red/40 rounded-full text-[10px] font-bold text-act-red uppercase tracking-wider shadow-sm">
@@ -92,7 +92,7 @@ export default function WhyChooseUs({ onOpenQuote }) {
             {features.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div 
+                <div
                   key={idx}
                   className="p-4 sm:p-5 bg-slate-900/90 border border-slate-800 rounded-2xl flex items-start space-x-4 transition-all duration-300 hover:border-act-red/50 hover:shadow-xl hover:shadow-act-red/10 hover:-translate-x-1 group text-left backdrop-blur-md"
                 >

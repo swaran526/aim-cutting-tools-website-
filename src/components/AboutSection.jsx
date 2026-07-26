@@ -6,33 +6,33 @@ import companyData from '../data/company.json';
 export default function AboutSection({ onOpenQuote }) {
   return (
     <section className="py-10 sm:py-16 bg-slate-950 text-white relative overflow-hidden tech-grid-bg">
-      
+
       {/* Radial Ambient Red Lighting Glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-act-red/10 rounded-full filter blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* Left Column: Visual Artwork / Story Card matching Hero right showcase card */}
           <div className="lg:col-span-5 relative">
             <div className="relative bg-slate-900/95 border border-slate-800/90 rounded-3xl p-6 shadow-2xl backdrop-blur-xl group hover:border-act-red/50 transition-all duration-300">
-              
-              {/* Actual Factory / Story Image */}
+
+              {/* Founder Image */}
               <div className="relative h-56 w-full overflow-hidden rounded-2xl mb-5 border border-slate-800 bg-slate-950">
-                <img 
-                  src="/assets/images/our_story_1.jpeg" 
-                  alt="ACT Manufacturing Facility Peenya Bangalore" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                <img
+                  src="/assets/images/about-us/founded-by/1.jpeg"
+                  alt="ACT Founder Mr. Parashuram - AIM Cutting Tools Peenya Bangalore"
+                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = "/src/assets/images/our_story_1.jpeg";
+                    e.target.src = "/assets/images/about-us/manufacturing-gallery/our_story_1.png";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
               </div>
 
               <div className="relative bg-slate-950/80 rounded-2xl p-6 border border-slate-800/90 space-y-5 text-left">
-                
+
                 {/* Badge Header */}
                 <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                   <div className="flex items-center space-x-2">
@@ -84,7 +84,7 @@ export default function AboutSection({ onOpenQuote }) {
 
           {/* Right Column: Confident Company Overview & CTAs matching Hero left content */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            
+
             {/* Trust Badge matching Hero */}
             <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
               <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>

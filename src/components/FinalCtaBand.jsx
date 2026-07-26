@@ -4,7 +4,22 @@ import companyData from '../data/company.json';
 
 export default function FinalCtaBand({ onOpenQuote }) {
   return (
-    <section className="w-full bg-gradient-to-b from-slate-900 to-slate-950 bg-slate-950 text-white py-8 sm:py-12 px-4 relative overflow-hidden border-t border-slate-200/80">
+    <section className="w-full bg-gradient-to-b from-slate-900 to-slate-950 text-white py-8 sm:py-12 px-4 relative overflow-hidden border-t border-slate-800">
+
+      {/* Background Image from Manufacturing Gallery */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <img
+          src="/assets/images/about-us/manufacturing-gallery/our_story_2.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover opacity-10"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "/assets/images/about-us/manufacturing-gallery/our_story_1.png";
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/95 via-slate-900/80 to-slate-950/95"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
         

@@ -5,38 +5,42 @@ import WhyChooseUs from '../components/WhyChooseUs';
 
 export default function About({ onOpenQuote }) {
   const storyImages = [
-    { src: "/assets/images/our_story_1.png", alt: "CNC Tool Grinding Workshop Peenya" },
-    { src: "/assets/images/our_story_2.png", alt: "Solid Carbide Flute Inspection" },
-    { src: "/assets/images/our_story_3.png", alt: "Micrograin Substrates & Raw Stock" },
-    { src: "/assets/images/our_story_4.png", alt: "PVD Coating Chamber Operations" }
+    { src: "/assets/images/about-us/manufacturing-gallery/our_story_1.png", alt: "CNC Tool Grinding Workshop Peenya" },
+    { src: "/assets/images/about-us/manufacturing-gallery/our_story_2.png", alt: "Solid Carbide Flute Inspection" },
+    { src: "/assets/images/about-us/manufacturing-gallery/our_story_3.png", alt: "Micrograin Substrates & Raw Stock" },
+    { src: "/assets/images/about-us/manufacturing-gallery/our_story_4.png", alt: "PVD Coating Chamber Operations" }
   ];
 
   const coreValues = [
     {
       icon: Award,
       title: "Sub-Micron Precision Guarantee",
-      desc: "Every solid carbide tool produced undergoes optical profile projector & laser micrometer inspection with shank tolerance guaranteed to ±0.002mm ISO H6."
+      desc: "Every solid carbide tool produced undergoes optical profile projector & laser micrometer inspection with shank tolerance guaranteed to ±0.002mm ISO H6.",
+      image: "/assets/images/about-us/why-us/why_us_1.png"
     },
     {
       icon: Factory,
       title: "Direct Peenya Manufacturing",
-      desc: "No middleman markup. Designed, ground, and inspected inside our Peenya 2nd Stage plant, Bangalore."
+      desc: "No middleman markup. Designed, ground, and inspected inside our Peenya 2nd Stage plant, Bangalore.",
+      image: "/assets/images/about-us/why-us/why_us_2.png"
     },
     {
       icon: Users,
       title: "Customer-Centric Tool Engineering",
-      desc: "Founded by Mr. Parashuram in 2016 to deliver quick custom blueprint form tools without long lead times."
+      desc: "Founded by Mr. Parashuram in 2016 to deliver quick custom blueprint form tools without long lead times.",
+      image: "/assets/images/about-us/why-us/why_us_3.png"
     },
     {
       icon: Shield,
       title: "100% Quality Assurance",
-      desc: "Full traceablity from premium K40/MG10 carbide rod stock to final PVD coating and packaging."
+      desc: "Full traceablity from premium K40/MG10 carbide rod stock to final PVD coating and packaging.",
+      image: "/assets/images/about-us/why-us/why_us_4.png"
     }
   ];
 
   return (
     <div className="bg-slate-950 text-white min-h-screen font-sans tech-grid-bg relative overflow-hidden">
-      
+
       {/* 1. Page Hero Banner matching Hero formula */}
       <section className="relative py-4 sm:py-6 bg-slate-950 border-b border-slate-800/80 text-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
@@ -70,11 +74,11 @@ export default function About({ onOpenQuote }) {
       {/* 2. Company Story Split Section */}
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          
+
           {/* Left Column: Founder & Plant Story matching Hero right card */}
           <div className="lg:col-span-5 relative">
             <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-act-red/50 transition-all duration-300 text-left">
-              
+
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div className="flex items-center space-x-2">
                   <UserCheck className="w-5 h-5 text-act-red" />
@@ -170,14 +174,14 @@ export default function About({ onOpenQuote }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {storyImages.map((img, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="bg-slate-900/95 border border-slate-800/90 rounded-2xl overflow-hidden shadow-2xl group hover:border-act-red/50 transition-all duration-300"
             >
               <div className="h-44 w-full bg-slate-950 overflow-hidden relative">
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
+                <img
+                  src={img.src}
+                  alt={img.alt}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
                     e.target.onerror = null;
@@ -213,7 +217,7 @@ export default function About({ onOpenQuote }) {
           {coreValues.map((val, idx) => {
             const Icon = val.icon;
             return (
-              <div 
+              <div
                 key={idx}
                 className="bg-slate-900/95 border border-slate-800/90 rounded-2xl p-5 space-y-3 shadow-2xl backdrop-blur-xl group hover:border-act-red/50 transition-all duration-300"
               >
