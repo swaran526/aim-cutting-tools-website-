@@ -5,14 +5,19 @@ import companyData from '../data/company.json';
 import productsData from '../data/products.json';
 
 export default function Hero({ onOpenQuote }) {
-  // 6 Flagship showcase items
-  const flagshipTools = productsData.slice(0, 6);
+  // All products in hero showcase
+  const flagshipTools = productsData;
   const [activeSlide, setActiveSlide] = useState(0);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % flagshipTools.length);
-    }, 5000);
+      setFade(false);
+      setTimeout(() => {
+        setActiveSlide((prev) => (prev + 1) % flagshipTools.length);
+        setFade(true);
+      }, 300);
+    }, 2000);
     return () => clearInterval(interval);
   }, [flagshipTools.length]);
 
@@ -129,7 +134,8 @@ export default function Hero({ onOpenQuote }) {
                 <img
                   src={currentTool.image}
                   alt={currentTool.name}
-                  className="w-full h-full object-cover transition-all duration-700 transform scale-100 group-hover/card:scale-105 filter drop-shadow-xl"
+                  className={`w-full h-full ${currentTool.slug === 'adjustable-boring-tool' || currentTool.imageFit === 'cover' ? 'object-cover' : 'object-contain'} transition-all duration-300 transform scale-100 group-hover/card:scale-105 filter drop-shadow-xl`}
+                  style={{ opacity: fade ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}
                 />
 
                 {/* Lighter bottom-only gradient overlay to keep image clear and text readable */}
