@@ -38,7 +38,7 @@ export default function WhyChooseUs({ onOpenQuote }) {
           
           {/* Left Column: Single Dominant Focal Showcase Card */}
           <div className="lg:col-span-5 relative flex flex-col h-full">
-            <div className="relative bg-slate-900/95 border border-slate-800/80 rounded-[24px] p-6 sm:p-8 shadow-2xl backdrop-blur-xl group hover:border-act-red/40 transition-all duration-300 overflow-hidden flex-1 flex flex-col justify-between min-h-[480px]">
+            <div className="relative bg-slate-900/95 border border-slate-800/80 rounded-[24px] p-6 sm:p-8 shadow-2xl backdrop-blur-xl group hover:border-act-red/40 transition-all duration-300 overflow-hidden flex-1 flex flex-col justify-between min-h-[380px] sm:min-h-[480px]">
               
               {/* Technical / Factory Background Image Watermark */}
               <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">

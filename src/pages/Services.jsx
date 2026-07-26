@@ -13,12 +13,12 @@ export default function Services({ onOpenQuote }) {
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-act-red/20 rounded-full filter blur-[140px] pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-5">
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md whitespace-nowrap">
-            <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
-            <span className="text-slate-300">CNC Tool Servicing</span>
+          <div className="inline-flex items-center space-x-2.5 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse shrink-0"></span>
+            <span className="text-slate-300 truncate">CNC Tool Servicing</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
             CNC Resharpening, Reconditioning & <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
               PVD Multi-Layer Coating.
@@ -80,9 +80,9 @@ export default function Services({ onOpenQuote }) {
 
           {/* Copy Right matching Hero content */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
-              <Award className="w-4 h-4 text-act-red" />
-              <span>SAVE UP TO 60% TOOLING COSTS</span>
+            <div className="inline-flex items-center space-x-2.5 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+              <Award className="w-4 h-4 text-act-red shrink-0" />
+              <span className="truncate">SAVE UP TO 60% TOOLING COSTS</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight text-white">

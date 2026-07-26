@@ -38,45 +38,47 @@ export default function Header({ onOpenQuote }) {
     <header className="sticky top-0 z-40 w-full font-sans transition-all duration-300">
 
       {/* Top Announcement Strip */}
-      <div className="bg-slate-950 border-b border-slate-800 text-xs py-2 px-4 text-slate-300">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div className="bg-slate-950 border-b border-slate-800 text-[11px] sm:text-xs py-1.5 px-3 sm:px-4 text-slate-300">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
 
-          <div className="flex items-center space-x-6 overflow-x-auto whitespace-nowrap">
-            <span className="flex items-center space-x-1.5 text-slate-400">
+          {/* Location & Est badge */}
+          <div className="flex items-center space-x-3 sm:space-x-6 overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="flex items-center space-x-1 text-slate-400">
               <MapPin className="w-3.5 h-3.5 text-act-red shrink-0" />
-              <span>{companyData.contact.area}, Bangalore - 560058</span>
+              <span className="truncate">{companyData.contact.area}, Bangalore</span>
             </span>
             <span className="hidden sm:flex items-center space-x-1.5 text-slate-400">
               <Clock className="w-3.5 h-3.5 text-act-red shrink-0" />
               <span>{companyData.contact.workingHours}</span>
             </span>
-            <span className="flex items-center space-x-1.5 text-emerald-400 font-medium">
+            <span className="hidden md:flex items-center space-x-1.5 text-emerald-400 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
               <span>Est. 2016 • Founder: {companyData.founder}</span>
             </span>
           </div>
 
-          <div className="flex items-center space-x-4">
+          {/* Quick Direct Phone */}
+          <div className="flex items-center space-x-3 shrink-0">
             <a
               href={`tel:${companyData.contact.phonePrimary}`}
-              className="flex items-center space-x-1.5 text-white hover:text-act-red transition-colors font-semibold"
+              className="flex items-center space-x-1 text-white hover:text-act-red transition-colors font-semibold"
             >
-              <Phone className="w-3.5 h-3.5 text-act-red" />
-              <span>{companyData.contact.phonePrimary}</span>
+              <Phone className="w-3.5 h-3.5 text-act-red shrink-0" />
+              <span className="font-mono">{companyData.contact.phonePrimary}</span>
             </a>
-            <span className="text-slate-500">|</span>
+            <span className="hidden sm:inline text-slate-500">|</span>
             <a
               href={`tel:${companyData.contact.phoneSecondary}`}
-              className="hidden sm:flex items-center space-x-1.5 text-slate-300 hover:text-act-red transition-colors"
+              className="hidden sm:flex items-center space-x-1 text-slate-300 hover:text-act-red transition-colors font-mono"
             >
               <span>{companyData.contact.phoneSecondary}</span>
             </a>
-            <span className="hidden sm:inline text-slate-500">|</span>
+            <span className="hidden md:inline text-slate-500">|</span>
             <a
               href={`mailto:${companyData.contact.email}`}
               className="hidden md:flex items-center space-x-1.5 text-slate-300 hover:text-act-red transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-act-red" />
+              <Mail className="w-3.5 h-3.5 text-act-red shrink-0" />
               <span>{companyData.contact.email}</span>
             </a>
           </div>

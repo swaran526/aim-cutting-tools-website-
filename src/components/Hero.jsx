@@ -95,7 +95,7 @@ export default function Hero({ onOpenQuote }) {
                 </button>
                 <Link
                   to="/products"
-                  className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-2 text-center transform active:scale-95 cursor-pointer"
+                  className="px-8 py-4 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white text-base font-semibold rounded-xl border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center space-x-2 text-center shadow-lg transform active:scale-95 cursor-pointer"
                 >
                   <span>Explore Catalog</span>
                 </Link>
