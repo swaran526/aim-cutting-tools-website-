@@ -34,19 +34,17 @@ export default function Hero({ onOpenQuote }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-              <span className="relative inline-block">
-                {/* Soft red accent behind Precision Starts */}
-                <span className="absolute -inset-x-3 -inset-y-1 bg-[#E11D2E]/8 rounded-full blur-lg filter pointer-events-none -z-10"></span>
-                <span className="relative z-10 text-[#111827]">Precision Starts</span>
-              </span>
-              <br />
-              <span className="relative inline-block">
-                {/* Faint blue glow behind "with AIM." */}
-                <span className="absolute -inset-x-4 -inset-y-2 bg-[#005FAF]/12 rounded-full blur-xl filter pointer-events-none -z-10"></span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500 relative z-10">
-                  with AIM.
-                </span>
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight sm:leading-[1.18] tracking-tight">
+              <span className="text-brand-red inline sm:block">
+                Precision Engineered
+              </span>{" "}
+              <br className="hidden sm:inline" />
+              <span className="text-brand-gradient inline sm:inline-block py-0.5">
+                Solid Carbide Cutting Tools
+              </span>{" "}
+              <br className="hidden sm:inline" />
+              <span className="text-brand-blue inline sm:block">
+                for High-Performance Manufacturing.
               </span>
             </h1>
 

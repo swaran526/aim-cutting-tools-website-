@@ -240,12 +240,26 @@
 
 
 /* Stunning red-to-blue gradient flow for the logo text */
-.logo-text-gradient {
-  background-image: linear-gradient(to right, #E11D2E 20%, #005FAF 80%) !important;
+.logo-text-gradient,
+.text-brand-gradient {
+  background-image: linear-gradient(to right, #E11D2E 0%, #E11D2E 40%, #005FAF 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: transparent !important;
   display: inline-block;
+}
+
+.text-brand-red {
+  color: #E11D2E !important;
+  -webkit-text-fill-color: #E11D2E !important;
+  background: none !important;
+}
+
+.text-brand-blue {
+  color: #005FAF !important;
+  -webkit-text-fill-color: #005FAF !important;
+  background: none !important;
 }
 
 /* Make sure child spans inside headings inherit the parent's text gradient flow */
