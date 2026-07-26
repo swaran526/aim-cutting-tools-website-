@@ -36,11 +36,11 @@ export default function Header({ onOpenQuote }) {
 
   return (
     <header className="sticky top-0 z-40 w-full font-sans transition-all duration-300">
-      
+
       {/* Top Announcement Strip */}
       <div className="bg-slate-950 border-b border-slate-800 text-xs py-2 px-4 text-slate-300">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-          
+
           <div className="flex items-center space-x-6 overflow-x-auto whitespace-nowrap">
             <span className="flex items-center space-x-1.5 text-slate-400">
               <MapPin className="w-3.5 h-3.5 text-act-red shrink-0" />
@@ -57,23 +57,23 @@ export default function Header({ onOpenQuote }) {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a 
-              href={`tel:${companyData.contact.phonePrimary}`} 
+            <a
+              href={`tel:${companyData.contact.phonePrimary}`}
               className="flex items-center space-x-1.5 text-white hover:text-act-red transition-colors font-semibold"
             >
               <Phone className="w-3.5 h-3.5 text-act-red" />
               <span>{companyData.contact.phonePrimary}</span>
             </a>
             <span className="text-slate-500">|</span>
-            <a 
-              href={`tel:${companyData.contact.phoneSecondary}`} 
+            <a
+              href={`tel:${companyData.contact.phoneSecondary}`}
               className="hidden sm:flex items-center space-x-1.5 text-slate-300 hover:text-act-red transition-colors"
             >
               <span>{companyData.contact.phoneSecondary}</span>
             </a>
             <span className="hidden sm:inline text-slate-500">|</span>
-            <a 
-              href={`mailto:${companyData.contact.email}`} 
+            <a
+              href={`mailto:${companyData.contact.email}`}
               className="hidden md:flex items-center space-x-1.5 text-slate-300 hover:text-act-red transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-act-red" />
@@ -85,18 +85,17 @@ export default function Header({ onOpenQuote }) {
       </div>
 
       {/* Main Navbar */}
-      <nav className={`w-full transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl py-2.5' 
+      <nav className={`w-full transition-all duration-300 ${isScrolled
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl py-2.5'
           : 'bg-slate-900 border-b border-slate-800/80 py-2.5'
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
+
           {/* Logo & Company Name Brand Link */}
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
-            <img 
-              src="/assets/images/logo/logo.jpeg" 
-              alt="AIM CUTTING TOOLS Logo" 
+          <Link to="/" className="flex items-center space-x-4 sm:space-x-5 group">
+            <img
+              src="/assets/images/logo/logo.jpeg"
+              alt="AIM CUTTING TOOLS Logo"
               className="h-8 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-105"
               onError={(e) => {
                 e.target.onerror = null;
@@ -114,11 +113,10 @@ export default function Header({ onOpenQuote }) {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all relative ${
-                  isActive(link.path)
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all relative ${isActive(link.path)
                     ? 'text-white font-semibold bg-slate-800/80'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
-                }`}
+                  }`}
               >
                 {link.name}
                 {isActive(link.path) && (
@@ -160,11 +158,10 @@ export default function Header({ onOpenQuote }) {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                  isActive(link.path)
+                className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive(link.path)
                     ? 'text-white font-bold bg-act-red/20 border border-act-red/40'
                     : 'text-slate-300 hover:bg-slate-800'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>

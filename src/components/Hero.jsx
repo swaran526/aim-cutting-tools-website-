@@ -19,12 +19,9 @@ export default function Hero({ onOpenQuote }) {
   const currentTool = flagshipTools[activeSlide];
 
   return (
-    <section className="relative w-full min-h-[82vh] bg-slate-950 text-white overflow-hidden flex flex-col justify-center tech-grid-bg">
+    <section className="relative w-full min-h-[75vh] bg-gradient-to-b from-slate-900 to-slate-950 bg-slate-950 text-slate-100 overflow-hidden flex flex-col justify-center">
 
-      {/* Radial Ambient Red Lighting Glow */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-act-red/10 rounded-full filter blur-[150px] pointer-events-none"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-8 sm:pb-12 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 pb-6 sm:pb-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
 
           {/* Hero Left Copy Content */}
@@ -38,9 +35,18 @@ export default function Hero({ onOpenQuote }) {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-              Precision Carbide Tooling. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
-                Manufactured to Perform.
+              <span className="relative inline-block">
+                {/* Soft red accent behind Precision Starts */}
+                <span className="absolute -inset-x-3 -inset-y-1 bg-[#E11D2E]/8 rounded-full blur-lg filter pointer-events-none -z-10"></span>
+                <span className="relative z-10 text-[#111827]">Precision Starts</span>
+              </span>
+              <br />
+              <span className="relative inline-block">
+                {/* Faint blue glow behind "with AIM." */}
+                <span className="absolute -inset-x-4 -inset-y-2 bg-[#005FAF]/12 rounded-full blur-xl filter pointer-events-none -z-10"></span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500 relative z-10">
+                  with AIM.
+                </span>
               </span>
             </h1>
 
@@ -112,66 +118,34 @@ export default function Hero({ onOpenQuote }) {
           </div>
 
           {/* Hero Right Interactive Showcase Card */}
-          <div className="lg:col-span-6 relative w-full h-[580px] sm:h-[620px] lg:h-full flex flex-col">
+          <div className="lg:col-span-6 relative w-full h-[580px] sm:h-[620px] lg:h-full flex flex-col group/card">
 
             {/* Soft Outer Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-act-red/30 to-blue-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-act-red/10 to-blue-500/10 rounded-[28px] blur-xl opacity-60 transition duration-1000"></div>
 
-            {/* Card Frame - Red light border */}
-            <div className="relative bg-slate-900/95 border border-act-red/35 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl overflow-hidden h-full flex flex-col justify-between">
+            {/* Card Frame - Full Screen Image & Overlay text */}
+            <div className="relative bg-slate-900/95 border border-slate-200/80 rounded-[24px] shadow-2xl shadow-slate-950/15 backdrop-blur-xl overflow-hidden h-full flex flex-col justify-end">
 
-              {/* Product Preview Image Frame - Scales dynamically to match left column height */}
-              <div className="relative mt-0 mb-3 flex-1 w-full bg-slate-950/90 rounded-xl border border-slate-800/90 overflow-hidden shadow-inner">
+              {/* Product Preview Image - full size */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img
                   src={currentTool.image}
                   alt={currentTool.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl transition-all duration-500 transform hover:scale-105 filter drop-shadow-xl"
+                  className="w-full h-full object-cover transition-all duration-700 transform scale-100 group-hover/card:scale-105 filter drop-shadow-xl"
                 />
+
+                {/* Lighter bottom-only gradient overlay to keep image clear and text readable */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
               </div>
 
-              {/* Product Info - Pushed down, allowing image frame to use more space */}
-              <div className="space-y-1 text-left shrink-0 mt-1.5 mb-0">
-                <div className="flex items-center justify-between gap-2 shrink-0">
-                  <h3 className="text-base sm:text-lg font-bold text-white font-display truncate h-7">{currentTool.name}</h3>
-                </div>
-
-                {/* Description with fixed height to prevent vertical shifting */}
-                <p className="text-xs text-slate-400 h-8 line-clamp-2 leading-relaxed shrink-0">
+              {/* Product Info Overlayed over the Image */}
+              <div className="relative p-6 sm:p-8 space-y-2 z-10 text-left">
+                <h3 className="text-xl sm:text-2xl font-black text-white font-display leading-tight">
+                  {currentTool.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                   {currentTool.shortDescription}
                 </p>
-
-              </div>
-
-              {/* Slider Navigation & Direct Quote CTA */}
-              <div className="mt-0.5 pt-1.5 border-t border-slate-800/60 flex items-center justify-between shrink-0">
-                <div className="flex space-x-1.5">
-                  {flagshipTools.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveSlide(idx)}
-                      className={`h-2 rounded-full transition-all cursor-pointer ${idx === activeSlide ? 'w-6 bg-act-red' : 'w-2 bg-slate-700 hover:bg-slate-500'
-                        }`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setActiveSlide((prev) => (prev - 1 + flagshipTools.length) % flagshipTools.length)}
-                    className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg transition-colors cursor-pointer border border-slate-700"
-                    aria-label="Previous Tool"
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setActiveSlide((prev) => (prev + 1) % flagshipTools.length)}
-                    className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg transition-colors cursor-pointer border border-slate-700"
-                    aria-label="Next Tool"
-                  >
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
               </div>
 
             </div>
@@ -181,29 +155,7 @@ export default function Hero({ onOpenQuote }) {
         </div>
       </div>
 
-      {/* Hero Bottom Trust Bar */}
-      <div className="w-full bg-slate-950 border-t border-b border-slate-800/80 py-5 relative z-10 tech-grid-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:divide-x divide-slate-800/80">
-            <div className="px-2">
-              <p className="text-xl sm:text-2xl font-extrabold font-mono text-act-red">±0.002 mm</p>
-              <p className="text-xs text-slate-300 font-medium mt-0.5">Manufacturing Tolerance</p>
-            </div>
-            <div className="px-2">
-              <p className="text-xl sm:text-2xl font-extrabold font-mono text-white">14+ Categories</p>
-              <p className="text-xs text-slate-300 font-medium mt-0.5">Precision Cutting Tools</p>
-            </div>
-            <div className="px-2">
-              <p className="text-xl sm:text-2xl font-extrabold font-mono text-white">500+ Machine Shops</p>
-              <p className="text-xs text-slate-300 font-medium mt-0.5">Serviced Across India</p>
-            </div>
-            <div className="px-2">
-              <p className="text-xl sm:text-2xl font-extrabold font-mono text-amber-400">24-48 Hours</p>
-              <p className="text-xs text-slate-300 font-medium mt-0.5">Rapid Resharpening</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
     </section>
   );

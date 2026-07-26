@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Award, Users, CheckCircle2, Factory, Calendar, MapPin, ArrowRight, UserCheck, Phone } from 'lucide-react';
 import companyData from '../data/company.json';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 export default function About({ onOpenQuote }) {
   const storyImages = [
@@ -114,7 +115,7 @@ export default function About({ onOpenQuote }) {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
               <Calendar className="w-4 h-4 text-act-red" />
-              <span>OUR 8-YEAR JOURNEY (2016 - PRESENT)</span>
+              <span>OUR JOURNEY (2016 - PRESENT)</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
@@ -228,6 +229,12 @@ export default function About({ onOpenQuote }) {
           })}
         </div>
       </section>
+
+      {/* Transition Device 4: Subtle Separator */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-800/80 to-transparent"></div>
+
+      {/* 5. Why Choose Us Section */}
+      <WhyChooseUs onOpenQuote={onOpenQuote} />
 
     </div>
   );

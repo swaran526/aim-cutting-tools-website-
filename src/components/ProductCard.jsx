@@ -18,20 +18,6 @@ export default function ProductCard({ product, onOpenQuote }) {
           alt={`${product.name} - AIM CUTTING TOOLS`}
           className="w-full max-h-48 object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-[0_10px_15px_rgba(227,30,36,0.15)]"
         />
-
-        {/* Category Type Badge (Manufacturing vs Trading) */}
-        <span className={`absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md border ${
-          product.type === 'Manufacturing'
-            ? 'bg-act-red/15 text-act-red border-act-red/40'
-            : 'bg-amber-500/15 text-amber-400 border-amber-500/40'
-        }`}>
-          {product.type}
-        </span>
-
-        {/* Precision Micron Badge */}
-        <span className="absolute bottom-3 right-3 text-[10px] font-mono text-slate-200 bg-slate-900/90 px-2 py-0.5 rounded border border-slate-700">
-          ±0.002mm ISO H6
-        </span>
       </div>
 
       {/* Card Body */}
@@ -45,18 +31,6 @@ export default function ProductCard({ product, onOpenQuote }) {
             {product.shortDescription}
           </p>
         </div>
-
-        {/* Key Specs Summary Pills */}
-        {product.specs && (
-          <div className="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] space-y-1 text-slate-200">
-            {Object.entries(product.specs).slice(0, 2).map(([key, val]) => (
-              <div key={key} className="flex justify-between items-center">
-                <span className="text-slate-300 font-medium">{key}:</span>
-                <span className="font-semibold text-white truncate max-w-[150px]">{val}</span>
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* Card Actions */}
         <div className="pt-2 flex items-center gap-2">

@@ -49,7 +49,7 @@ export default function App() {
             <Route path="/products" element={<Products onOpenQuote={handleOpenQuote} />} />
             <Route path="/products/:slug" element={<ProductDetail onOpenQuote={handleOpenQuote} />} />
             <Route path="/services" element={<Services onOpenQuote={handleOpenQuote} />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact onOpenQuote={handleOpenQuote} />} />
             <Route path="*" element={<Home onOpenQuote={handleOpenQuote} />} />
           </Routes>
         </main>

@@ -29,9 +29,6 @@ export default function AboutSection({ onOpenQuote }) {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                <span className="absolute bottom-3 left-3 text-xs font-mono font-bold text-white bg-slate-900/95 px-3 py-1 rounded-lg border border-slate-700 backdrop-blur-md shadow-md">
-                  Peenya 2nd Stage Plant
-                </span>
               </div>
 
               <div className="relative bg-slate-950/80 rounded-2xl p-6 border border-slate-800/90 space-y-5 text-left">

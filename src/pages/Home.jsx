@@ -3,8 +3,6 @@ import Hero from '../components/Hero';
 import TrustStrip from '../components/TrustStrip';
 import AboutSection from '../components/AboutSection';
 import ProductGrid from '../components/ProductGrid';
-import CapabilitiesSection from '../components/CapabilitiesSection';
-import WhyChooseUs from '../components/WhyChooseUs';
 import FinalCtaBand from '../components/FinalCtaBand';
 
 export default function Home({ onOpenQuote }) {
@@ -29,19 +27,9 @@ export default function Home({ onOpenQuote }) {
       </div>
 
       {/* 4. Product Taxonomy Grid Section */}
-      <ProductGrid onOpenQuote={onOpenQuote} limit={14} title="Product Categories Taxonomy (14)" />
+      <ProductGrid onOpenQuote={onOpenQuote} limit={4} title="Our Precision Tooling Catalog" />
 
-      {/* Transition Device 3: Angled Accent Cut Separator */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-act-red/50 to-transparent"></div>
 
-      {/* 5. Capabilities & Servicing (Interactive Tabbed Process Workflow) */}
-      <CapabilitiesSection onOpenQuote={onOpenQuote} />
-
-      {/* Transition Device 4: Gradient Bleed Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-
-      {/* 6. Why Choose Us (Split Feature & Stat Showcase) */}
-      <WhyChooseUs onOpenQuote={onOpenQuote} />
 
       {/* 7. Final Call-to-Action Banner */}
       <FinalCtaBand onOpenQuote={onOpenQuote} />

@@ -4,10 +4,7 @@ import companyData from '../data/company.json';
 
 export default function FinalCtaBand({ onOpenQuote }) {
   return (
-    <section className="w-full bg-slate-950 text-white py-10 sm:py-16 px-4 relative overflow-hidden border-t border-slate-800/80 tech-grid-bg">
-      
-      {/* Radial Ambient Red and Blue Lighting Glows matching Hero */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-act-red/20 rounded-full filter blur-[150px] pointer-events-none"></div>
+    <section className="w-full bg-gradient-to-b from-slate-900 to-slate-950 bg-slate-950 text-white py-8 sm:py-12 px-4 relative overflow-hidden border-t border-slate-200/80">
 
       <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
         
@@ -33,15 +30,15 @@ export default function FinalCtaBand({ onOpenQuote }) {
           
           <a
             href={`tel:${companyData.contact.phonePrimary}`}
-            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-2 cursor-pointer transform active:scale-95"
+            className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-slate-900 text-base font-semibold rounded-xl border border-slate-700/80 transition-all flex items-center justify-center space-x-2 shadow-lg"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-5 h-5 text-act-red" />
             <span>Call: {companyData.contact.phonePrimary}</span>
           </a>
 
           <a
             href={`mailto:${companyData.contact.email}`}
-            className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-base font-semibold rounded-xl border border-slate-700/80 transition-all flex items-center justify-center space-x-2 shadow-lg"
+            className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-slate-900 text-base font-semibold rounded-xl border border-slate-700/80 transition-all flex items-center justify-center space-x-2 shadow-lg"
           >
             <Mail className="w-5 h-5 text-act-red" />
             <span>Email Inquiry</span>
@@ -49,10 +46,10 @@ export default function FinalCtaBand({ onOpenQuote }) {
 
           <button
             onClick={onOpenQuote}
-            className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white text-base font-bold rounded-xl border border-slate-700 transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-neutral-50 text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-2 cursor-pointer transform active:scale-95 border-none"
           >
             <span>Request Quote</span>
-            <ArrowRight className="w-5 h-5 text-act-red" />
+            <ArrowRight className="w-5 h-5 text-neutral-50" />
           </button>
 
         </div>

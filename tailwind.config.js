@@ -13,16 +13,16 @@ export default {
           800: "#E2E8F0", // Crisp Silver Border
           700: "#CBD5E1", // Metallic Silver Border Highlight
           400: "#64748B", // Crisp Subtext
-          300: "#334155", // High Contrast Dark Body Text
-          200: "#1E293B", // Crisp Heading Subtext
-          100: "#0F172A", // Dark Heading Text
+          300: "#374151", // High Contrast Dark Body Text
+          200: "#1F2937", // Crisp Heading Subtext
+          100: "#111827", // Dark Heading Text
         },
         act: {
           red: {
-            DEFAULT: "#E31E24",
-            dark: "#0284c7", // Premium light sky blue
-            light: "#0ea5e9", // Sky blue highlight
-            glow: "rgba(227, 30, 36, 0.15)",
+            DEFAULT: "#E11D2E",
+            dark: "#005FAF", // Premium brand blue
+            light: "#1d4ed8", // Blue highlight
+            glow: "rgba(225, 29, 46, 0.15)",
           },
           navy: {
             DEFAULT: "#151B28",
@@ -49,17 +49,17 @@ export default {
         'metal-pattern': "radial-gradient(circle at 50% 50%, rgba(27, 42, 74, 0.95) 0%, rgba(15, 23, 42, 1) 100%)",
         'grid-pattern': "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
         'card-gradient': "linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%)",
-        'red-gradient': "linear-gradient(135deg, #E31E24 0%, #B81217 100%)",
-        'navy-gradient': "linear-gradient(135deg, #1B2A4A 0%, #0F172A 100%)",
+        'red-gradient': "linear-gradient(135deg, #E11D2E 0%, #991b1b 100%)",
+        'navy-gradient': "linear-gradient(135deg, #005FAF 0%, #111827 100%)",
       },
       clipPath: {
         'diagonal': 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
         'badge': 'polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%)',
       },
       boxShadow: {
-        'act-glow': '0 0 25px rgba(227, 30, 36, 0.25)',
+        'act-glow': '0 0 25px rgba(225, 29, 46, 0.25)',
         'act-card': '0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03)',
-        'act-hover': '0 20px 40px -15px rgba(227, 30, 36, 0.2), 0 10px 15px -3px rgba(15, 23, 42, 0.1)',
+        'act-hover': '0 20px 40px -15px rgba(225, 29, 46, 0.2), 0 10px 15px -3px rgba(15, 23, 42, 0.1)',
       }
     },
   },

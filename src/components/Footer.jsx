@@ -6,22 +6,19 @@ import productsData from '../data/products.json';
 
 export default function Footer({ onOpenQuote }) {
   return (
-    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800/80 pt-10 sm:pt-12 pb-6 relative overflow-hidden tech-grid-bg">
+    <footer className="bg-gradient-to-b from-slate-950 to-slate-900 bg-slate-950 text-slate-300 font-sans border-t border-slate-200/80 pt-6 sm:pt-8 pb-4 relative overflow-hidden">
       
-      {/* Red Ambient Glow matching other sections */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-act-red/10 rounded-full filter blur-[120px] pointer-events-none"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 pb-12">
-          
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 pb-6">
+
           {/* Column 1: Brand & Founder Info */}
           <div className="sm:col-span-2 lg:col-span-2 space-y-4 text-left">
-            <Link to="/" className="inline-flex items-center space-x-3 group">
-              <img 
-                src="/assets/images/logo/logo.jpeg" 
-                alt="AIM CUTTING TOOLS Logo" 
+            <Link to="/" className="inline-flex items-center space-x-4 sm:space-x-5 group">
+              <img
+                src="/assets/images/logo/logo.jpeg"
+                alt="AIM CUTTING TOOLS Logo"
                 className="h-10 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-105"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -32,7 +29,7 @@ export default function Footer({ onOpenQuote }) {
                 AIM CUTTING TOOLS
               </span>
             </Link>
-            
+
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
               {companyData.description}
             </p>
@@ -101,17 +98,17 @@ export default function Footer({ onOpenQuote }) {
 
             <button
               onClick={onOpenQuote}
-              className="w-full py-3 bg-act-red hover:bg-act-red-dark text-white text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer"
+              className="w-full py-3 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-neutral-50 text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer border-none"
             >
               <span>Get Custom Quote</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 text-neutral-50" />
             </button>
           </div>
 
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-400">
+        <div className="pt-4 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-400">
           <p>© {new Date().getFullYear()} AIM CUTTING TOOLS (ACT). All Rights Reserved. Peenya 2nd Stage, Bangalore.</p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-slate-400 font-medium">
             <span>ISO 9001 Certified Quality</span>

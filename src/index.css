@@ -6,7 +6,7 @@
   body {
     @apply bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden;
   }
-  
+
   select option {
     @apply bg-slate-900 text-slate-100 py-2;
   }
@@ -21,20 +21,23 @@
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F1F5F9;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #E31E24, #0284c7) !important;
+  background: linear-gradient(to bottom, #E11D2E, #005FAF) !important;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #FF3B42, #0ea5e9) !important;
+  background: linear-gradient(to bottom, #f87171, #1d4ed8) !important;
 }
 
 /* Clean Modern Visual Accents */
 .tech-grid-bg {
-  background-image: radial-gradient(circle at 50% 0%, rgba(227, 30, 36, 0.08) 0%, transparent 75%);
+  background-image: radial-gradient(circle at 50% 0%, rgba(225, 29, 46, 0.015) 0%, transparent 75%);
 }
 
 .diagonal-cut {
@@ -71,8 +74,17 @@
 
 /* Micro-Animations & Glow Utilities */
 @keyframes subtlePulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.03); }
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
 }
 
 .animate-subtle-pulse {
@@ -80,8 +92,15 @@
 }
 
 @keyframes floatGentle {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .animate-float-gentle {
@@ -89,8 +108,17 @@
 }
 
 @keyframes targetPulse {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
 .animate-target-pulse {
@@ -98,8 +126,15 @@
 }
 
 @keyframes redGlowPulse {
-  0%, 100% { box-shadow: 0 0 12px 2px rgba(227, 30, 36, 0.4); }
-  50% { box-shadow: 0 0 25px 6px rgba(227, 30, 36, 0.7); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px 2px rgba(227, 30, 36, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 25px 6px rgba(227, 30, 36, 0.7);
+  }
 }
 
 .animate-red-glow {
@@ -121,29 +156,39 @@
 
 /* 1. Body & Container Text Fixes */
 .bg-slate-950.text-white {
-  color: #0F172A !important; /* Dark Heading Text (slate-100) */
+  color: #111827 !important;
+  /* Dark Heading Text (slate-100) */
 }
+
 .bg-slate-950 .text-slate-100,
 .bg-slate-900 .text-slate-100 {
-  color: #0F172A !important; /* High Contrast Dark Heading / Content Text */
+  color: #111827 !important;
+  /* High Contrast Dark Heading / Content Text */
 }
+
 .bg-slate-950 .text-slate-200,
 .bg-slate-900 .text-slate-200 {
-  color: #1E293B !important; /* High Contrast Heading Subtext */
+  color: #1F2937 !important;
+  /* High Contrast Heading Subtext */
 }
+
 .bg-slate-950 .text-slate-300,
 .bg-slate-900 .text-slate-300 {
-  color: #334155 !important; /* High Contrast Dark Body Text (slate-300) */
+  color: #374151 !important;
+  /* High Contrast Dark Body Text (slate-300) */
 }
+
 .bg-slate-950 .text-slate-400,
 .bg-slate-900 .text-slate-400 {
-  color: #475569 !important; /* Clear Slate Subtext */
+  color: #4B5563 !important;
+  /* Clear Slate Subtext */
 }
 
 /* 2. Generic White Text Overrides inside Light backgrounds */
 .bg-slate-950 .text-white,
 .bg-slate-900 .text-white {
-  color: #0F172A !important; /* Force all standard white text to be dark slate */
+  color: #111827 !important;
+  /* Force all standard white text to be dark slate */
 }
 
 /* 3. Heading Contrast Fixes (Force all headings to render in a stunning red-to-black gradient flow) */
@@ -163,7 +208,7 @@
 [class*="bg-slate-900"] h3.text-white:has(span),
 [class*="bg-slate-900"] h4:has(span),
 [class*="bg-slate-900"] h4.text-white:has(span) {
-  color: #E31E24 !important;
+  color: #E11D2E !important;
   background: none !important;
   background-image: none !important;
   -webkit-background-clip: initial !important;
@@ -186,7 +231,7 @@
 [class*="bg-slate-900"] h3.text-white:not(:has(span)),
 [class*="bg-slate-900"] h4:not(:has(span)),
 [class*="bg-slate-900"] h4.text-white:not(:has(span)) {
-  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
+  background-image: linear-gradient(to right, #E11D2E 20%, #005FAF 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -196,7 +241,7 @@
 
 /* Stunning red-to-blue gradient flow for the logo text */
 .logo-text-gradient {
-  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
+  background-image: linear-gradient(to right, #E11D2E 20%, #005FAF 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -220,7 +265,7 @@
 [class*="bg-slate-900"] h3.text-white span,
 [class*="bg-slate-900"] h4 span,
 [class*="bg-slate-900"] h4.text-white span {
-  background-image: linear-gradient(to right, #E31E24 20%, #0284c7 80%) !important;
+  background-image: linear-gradient(to right, #E11D2E 20%, #005FAF 80%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -234,7 +279,8 @@ select.text-white,
 input[type="text"].text-white,
 input[type="tel"].text-white,
 input[type="email"].text-white {
-  color: #0F172A !important; /* Dark text inside form fields */
+  color: #111827 !important;
+  /* Dark text inside form fields */
 }
 
 /* 5. Chat Widget & Modal Contrast Fixes */
@@ -242,24 +288,26 @@ input[type="email"].text-white {
 .bg-slate-900\/95 span.text-white,
 .bg-slate-900 p.text-slate-200,
 .bg-slate-900 span.text-slate-200 {
-  color: #0F172A !important;
+  color: #111827 !important;
 }
 
 /* Ensure link text elements inside slate-900 cards are readable */
 .bg-slate-900 a.text-white:hover,
 .bg-slate-950 a.text-white:hover {
-  color: #E31E24 !important; /* Hover state red */
+  color: #E11D2E !important;
+  /* Hover state red */
 }
 
 /* 6. Button Hover State Contrast Fixes */
 .bg-slate-800:hover,
 .hover\:bg-slate-700:hover {
-  color: #0F172A !important;
+  color: #111827 !important;
 }
 
 /* 7. Trading Badge Contrast Fix */
 .text-amber-400 {
-  color: #D97706 !important; /* Use dark amber-600/700 for readability */
+  color: #D97706 !important;
+  /* Use dark amber-600/700 for readability */
 }
 
 /* 8. Reset and Protect elements inside actual colored Buttons, Badges, and popups */
@@ -285,7 +333,8 @@ input[type="email"].text-white {
 
 /* Restore green colors */
 .text-emerald-400 {
-  color: #10B981 !important; /* Keep green clear */
+  color: #10B981 !important;
+  /* Keep green clear */
 }
 
 /* 9. Widen Container Limits to Reduce Left/Right Margins on Desktop */
@@ -295,24 +344,25 @@ input[type="email"].text-white {
 
 /* 10. Global Spacing Reductions for Page Hero Sections (Tighten Top Margins below sticky Header) */
 main section.relative.bg-slate-950.text-center {
-  padding-top: 2.5rem !important; /* Reduce from pt-16 (64px) to pt-10 (40px) */
+  padding-top: 2.5rem !important;
+  /* Reduce from pt-16 (64px) to pt-10 (40px) */
   padding-bottom: 3.5rem !important;
 }
 
 main .bg-slate-950.min-h-screen {
-  padding-top: 2.5rem !important; /* Reduce from pt-12 (48px) to pt-10 (40px) */
+  padding-top: 2.5rem !important;
+  /* Reduce from pt-12 (48px) to pt-10 (40px) */
 }
 
 @media (min-width: 640px) {
   main section.relative.bg-slate-950.text-center {
-    padding-top: 3.5rem !important; /* Reduce from pt-24 (96px) to pt-14 (56px) */
+    padding-top: 3.5rem !important;
+    /* Reduce from pt-24 (96px) to pt-14 (56px) */
     padding-bottom: 4.5rem !important;
   }
-  
+
   main .bg-slate-950.min-h-screen {
-    padding-top: 3.5rem !important; /* Reduce from pt-20 (80px) to pt-14 (56px) */
+    padding-top: 3.5rem !important;
+    /* Reduce from pt-20 (80px) to pt-14 (56px) */
   }
 }
-
-
-

@@ -21,11 +21,11 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden h-full flex flex-col">
       
       {submitted ? (
         <div className="py-12 text-center space-y-6 animate-fadeIn">
-          <div className="w-16 h-16 mx-auto rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500">
+          <div className="w-16 h-16 mx-auto rounded-full bg-emerald-500/20 text-emerald-600 flex items-center justify-center border border-emerald-500">
             <CheckCircle2 className="w-10 h-10" />
           </div>
           <div className="space-y-2">
@@ -47,7 +47,7 @@ export default function ContactForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-5 text-left">
+        <form onSubmit={handleSubmit} className="space-y-5 text-left flex flex-col flex-1">
           
           <div className="space-y-1 border-b border-slate-800 pb-4">
             <h3 className="text-2xl font-bold font-display text-white flex items-center gap-2">
@@ -63,7 +63,7 @@ export default function ContactForm() {
               <input 
                 type="text"
                 required
-                placeholder="e.g. Anand Sharma"
+                placeholder="e.g. Arun Kumar J."
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                 className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-act-red focus:ring-1 focus:ring-act-red"
@@ -73,7 +73,7 @@ export default function ContactForm() {
               <label className="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Company Name</label>
               <input 
                 type="text"
-                placeholder="e.g. Apex Precision Tools"
+                placeholder="e.g. AIM Cutting Tools"
                 value={formData.company}
                 onChange={(e) => setFormData({...formData, company: e.target.value})}
                 className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-act-red focus:ring-1 focus:ring-act-red"
@@ -98,7 +98,7 @@ export default function ContactForm() {
               <input 
                 type="email"
                 required
-                placeholder="e.g. purchase@company.com"
+                placeholder="e.g. act.blr2016@gmail.com"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                 className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-act-red focus:ring-1 focus:ring-act-red"
@@ -122,22 +122,22 @@ export default function ContactForm() {
             </select>
           </div>
 
-          <div>
+          <div className="flex flex-col flex-1">
             <label className="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Tool Specifications / Quantity / Message</label>
             <textarea
               rows="4"
-              placeholder="Provide tool dimensions, quantities, target workpiece material (Steel, Stainless, Aluminum), or specific drawing requirements..."
+              placeholder="e.g. Solid Carbide Drill Ø10mm, 5 Qty — Material: SS304. Need regrinding or new supply from AIM Cutting Tools, Peenya."
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}
-              className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-act-red focus:ring-1 focus:ring-act-red"
+              className="flex-1 w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-act-red focus:ring-1 focus:ring-act-red resize-none"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white font-bold rounded-xl transition-all shadow-lg shadow-act-red/20 flex items-center justify-center space-x-2 text-sm uppercase tracking-wider"
+            className="w-full py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-3 text-sm uppercase tracking-wider cursor-pointer group transform active:scale-95"
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             <span>Submit Tooling Inquiry</span>
           </button>
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import productsData from '../data/products.json';
-import { Search, Filter, Wrench, Package, Layers } from 'lucide-react';
+import { Search, Filter, Wrench, Package, Layers, ArrowRight } from 'lucide-react';
 
 export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CNC Product Taxonomy (14 Categories)", showFilters = true }) {
   const [activeType, setActiveType] = useState('All');
@@ -28,38 +29,13 @@ export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CN
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-act-red/10 border border-act-red/30 rounded-full text-xs font-bold uppercase tracking-wider text-act-red mb-3">
-              <Layers className="w-3.5 h-3.5" />
-              <span>PRECISION TOOLING CATALOG</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white">
-              {title}
-            </h2>
-            <p className="text-slate-300 text-sm mt-2 max-w-2xl leading-relaxed">
-              From precision Solid Carbide Round Tools manufactured in Peenya to traded VMC accessories, tool holders, and metrology instruments.
-            </p>
-          </div>
-
-          {/* Quick Type Selector Pills */}
-          {showFilters && (
-            <div className="flex flex-wrap items-center gap-1.5 bg-slate-900 p-1.5 rounded-xl border border-slate-800 w-full sm:w-auto">
-              {['All', 'Manufacturing', 'Trading'].map((type) => (
-                <button
-                  key={type}
-                  onClick={() => setActiveType(type)}
-                  className={`flex-1 sm:flex-initial px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-center ${
-                    activeType === type
-                      ? 'bg-act-red text-white shadow-md'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800'
-                  }`}
-                >
-                  {type}
-                </button>
-              ))}
-            </div>
-          )}
+        <div className="text-center flex flex-col items-center justify-center mb-10 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white">
+            {title}
+          </h2>
+          <p className="text-slate-300 text-sm mt-3 leading-relaxed max-w-2xl">
+            From precision Solid Carbide Round Tools to VMC accessories, tool holders, and metrology instruments.
+          </p>
         </div>
 
         {/* Search and Category Filters Bar */}
@@ -89,16 +65,11 @@ export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CN
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full md:w-64 px-3 py-2.5 bg-slate-950 border border-slate-700/80 rounded-xl text-xs text-white focus:outline-none focus:border-act-red"
               >
-                <option value="All">All 14 Categories ({productsData.length})</option>
+                <option value="All">All Categories</option>
                 {productsData.map(p => (
                   <option key={p.id} value={p.category}>{p.category}</option>
                 ))}
               </select>
-            </div>
-
-            {/* Product Count Indicator */}
-            <div className="text-xs text-slate-300 font-mono hidden lg:block">
-              Showing <b className="text-act-red">{displayProducts.length}</b> of <b>{productsData.length}</b> categories
             </div>
 
           </div>
@@ -128,6 +99,17 @@ export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CN
             >
               Reset All Filters
             </button>
+          </div>
+        )}
+        {limit && productsData.length > limit && (
+          <div className="mt-12 text-center">
+            <Link
+              to="/products"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 transform active:scale-95 cursor-pointer"
+            >
+              <span>View More Products</span>
+              <ArrowRight className="w-5 h-5 text-white" />
+            </Link>
           </div>
         )}
 
