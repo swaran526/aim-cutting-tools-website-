@@ -1,271 +1,392 @@
-import React from 'react';
-import { RotateCcw, Wrench, Layers, CheckCircle2, ArrowRight, Phone, ShieldCheck, Award, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { RotateCcw, Wrench, Layers, CheckCircle2, ArrowRight, Phone, ShieldCheck, Award, Zap, Truck, SearchCheck, Clock, Sparkles, Send } from 'lucide-react';
 import companyData from '../data/company.json';
 
 export default function Services({ onOpenQuote }) {
+  const [activeBeforeAfter, setActiveBeforeAfter] = useState('after');
+
+  const pvdCoatings = [
+    {
+      name: "AlTiN",
+      fullname: "Aluminum Titanium Nitride",
+      bestFor: "Hardened Steels (up to 65 HRC), Mold & Die Steels",
+      maxTemp: "900°C",
+      benefit: "High thermal breakdown resistance for dry high-speed milling",
+      badgeColor: "bg-act-red/10 text-act-red border-act-red/30",
+    },
+    {
+      name: "TiAlN",
+      fullname: "Titanium Aluminum Nitride",
+      bestFor: "Stainless Steel, Mild Steel, Cast Iron & Alloy Steels",
+      maxTemp: "800°C",
+      benefit: "Versatile general-purpose protection with low edge build-up",
+      badgeColor: "bg-blue-500/10 text-blue-500 border-blue-500/30",
+    },
+    {
+      name: "nACo",
+      fullname: "Nanocomposite AlTiN/Si3N4",
+      bestFor: "Titanium Gr.5, Inconel 718, Superalloys & Stainless",
+      maxTemp: "1100°C",
+      benefit: "Nanocomposite extreme hardness (38 GPa) & extreme heat barrier",
+      badgeColor: "bg-purple-500/10 text-purple-500 border-purple-500/30",
+    },
+    {
+      name: "DLC",
+      fullname: "Diamond-Like Carbon",
+      bestFor: "Non-Ferrous Materials, Aluminum Alloys & Copper",
+      maxTemp: "400°C",
+      benefit: "Ultra-low friction (µ ≤ 0.1) preventing BUE & material galling",
+      badgeColor: "bg-emerald-500/10 text-emerald-600 border-emerald-500/30",
+    },
+  ];
+
+  const processSteps = [
+    {
+      step: "01",
+      icon: Truck,
+      title: "Collect & Ship Batch",
+      desc: "Send worn tools to Peenya workshop or schedule local pickup.",
+    },
+    {
+      step: "02",
+      icon: SearchCheck,
+      title: "Inspection & Quote",
+      desc: "Micro-inspection of flutes to issue fixed batch quote before grinding.",
+    },
+    {
+      step: "03",
+      icon: RotateCcw,
+      title: "5-Axis Regrind & Coating",
+      desc: "Precision CNC regrinding to ±0.002mm OEM geometry + PVD coating.",
+    },
+    {
+      step: "04",
+      icon: Clock,
+      title: "Delivery in 24–48 Hrs",
+      desc: "Quality-certified tool batch dispatched to your CNC shop floor.",
+    },
+  ];
+
   return (
     <div className="bg-slate-950 text-white font-sans min-h-screen tech-grid-bg relative overflow-hidden">
       
-      {/* 1. Hero Banner matching Hero section formula */}
-      <section className="relative py-16 sm:py-24 bg-slate-950 border-b border-slate-800/80 text-center overflow-hidden">
-        
-        {/* Radial Ambient Red and Blue Lighting Glows matching Hero */}
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-act-red/20 rounded-full filter blur-[140px] pointer-events-none"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-5">
-          <div className="inline-flex items-center space-x-2.5 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
-            <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse shrink-0"></span>
-            <span className="text-slate-300 truncate">CNC Tool Servicing</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-            CNC Resharpening, Reconditioning & <br className="hidden sm:inline" />
+      {/* 1. Hero Section */}
+      <section className="relative py-6 sm:py-8 bg-gradient-to-b from-slate-900 to-slate-950 bg-slate-950 border-b border-slate-800/80 text-center overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-3">
+          
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight text-white max-w-4xl mx-auto">
+            OEM-Quality Resharpening &amp; <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
-              PVD Multi-Layer Coating.
+              Advanced PVD Coating Services
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            Extend tooling life cycle, restore original flute geometries to OEM specifications, and reduce CNC tooling replacement budgets by up to 60% with ACT's Peenya servicing workshop.
+          <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+            Cut tooling replacement costs by up to <strong className="text-white">60%</strong> with 5-axis CNC grinding precision down to <strong className="text-act-red font-mono">±0.002 mm</strong>.
           </p>
 
-          <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
+          {/* CTAs */}
+          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
             <button
               onClick={onOpenQuote}
-              className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 hover:shadow-act-red/40 flex items-center justify-center space-x-3 cursor-pointer group transform active:scale-95"
+              className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-xs font-bold rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2 cursor-pointer transform active:scale-95 border-none"
             >
-              <span>Book Tool Servicing Batch</span>
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <Wrench className="w-4 h-4 text-white" />
+              <span>Request Servicing Quote</span>
+              <ArrowRight className="w-4 h-4 text-white" />
             </button>
             
             <a
               href={`tel:${companyData.contact.phonePrimary}`}
-              className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-base font-semibold rounded-xl border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center space-x-2 text-center shadow-lg"
+              className="w-full sm:w-auto px-6 py-3 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-semibold rounded-xl border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center space-x-2 text-center shadow-md"
             >
-              <Phone className="w-5 h-5 text-act-red" />
-              <span>Workshop Desk: {companyData.contact.phonePrimary}</span>
+              <Phone className="w-4 h-4 text-act-red shrink-0" />
+              <span>Call: +91 {companyData.contact.phonePrimary}</span>
             </a>
           </div>
+
         </div>
       </section>
 
-      {/* Transition Device 1: Glowing Divider */}
+      {/* Transition Line */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-act-red/40 to-transparent"></div>
 
-      {/* 2. Service 1: Precision CNC Resharpening */}
-      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      {/* 2. Process Flow */}
+      <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <h2 className="text-xl sm:text-2xl font-extrabold font-display text-white">How Tool Servicing Works</h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {processSteps.map((step, idx) => {
+            const Icon = step.icon;
+            return (
+              <div 
+                key={idx}
+                className="bg-slate-900/90 border border-slate-800 rounded-xl p-4 relative overflow-hidden group hover:border-act-red/50 transition-all shadow-md"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-act-red/10 border border-act-red/30 text-act-red flex items-center justify-center group-hover:bg-act-red group-hover:text-white transition-all">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-xl font-black font-mono text-slate-700 group-hover:text-act-red transition-colors">
+                    {step.step}
+                  </span>
+                </div>
+                <h3 className="text-sm font-bold text-white mb-1">{step.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
+
+      {/* 3. Core Services */}
+      <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 text-left">
+        
+        {/* Service 01: Precision CNC Resharpening */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           
-          {/* Card Left matching Hero showcase card */}
+          {/* Left Column: Micro-Inspection Scope */}
           <div className="lg:col-span-5 relative">
-            <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-8 space-y-6 shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-act-red/50 transition-all duration-300">
-              <div className="w-16 h-16 rounded-2xl bg-act-red/10 border border-act-red/40 text-act-red flex items-center justify-center group-hover:bg-act-red group-hover:text-white transition-all">
-                <RotateCcw className="w-8 h-8" />
+            <div className="bg-slate-900/95 border border-slate-800 rounded-2xl p-5 space-y-4 shadow-xl backdrop-blur-xl group hover:border-act-red/50 transition-all">
+              
+              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div className="flex items-center space-x-2">
+                  <RotateCcw className="w-4 h-4 text-act-red" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-300 font-mono">Micro-Inspection</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-act-red bg-act-red/10 px-2.5 py-0.5 rounded-full border border-act-red/30">
+                  5-Axis CNC
+                </span>
               </div>
 
-              <div className="space-y-2 text-left">
-                <span className="text-xs font-bold uppercase tracking-wider text-act-red">SERVICE 01</span>
-                <h3 className="text-2xl font-bold font-display text-white">Precision CNC Resharpening</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Using 5-axis CNC tool grinding machinery, we regrind worn cutting edges on Solid Carbide Drills, Endmills, Reamers, and Step Cutters to exact original factory parameters.
-                </p>
+              {/* Before/After Toggle */}
+              <div className="relative bg-slate-950 rounded-xl p-3 border border-slate-800 text-center space-y-2">
+                <div className="flex items-center justify-between bg-slate-900 rounded-lg p-1 border border-slate-800">
+                  <button
+                    onClick={() => setActiveBeforeAfter('before')}
+                    className={`flex-1 py-1 text-xs font-bold rounded transition-all ${
+                      activeBeforeAfter === 'before' 
+                        ? 'bg-red-500/20 text-act-red border border-act-red/40' 
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Worn Edge (Before)
+                  </button>
+                  <button
+                    onClick={() => setActiveBeforeAfter('after')}
+                    className={`flex-1 py-1 text-xs font-bold rounded transition-all ${
+                      activeBeforeAfter === 'after' 
+                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' 
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    5-Axis Reground (After)
+                  </button>
+                </div>
+
+                <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800 text-left space-y-1.5">
+                  {activeBeforeAfter === 'before' ? (
+                    <div className="space-y-1.5">
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-slate-400">Flute Edge Status:</span>
+                        <span className="text-act-red font-bold">Chipped &amp; Flank Worn</span>
+                      </div>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-slate-400">Estimated Runout:</span>
+                        <span className="text-red-400 font-mono">≥ 0.015 mm</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="space-y-1.5">
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-slate-400">Flute Edge Status:</span>
+                        <span className="text-emerald-400 font-bold">100% Mirror Finish</span>
+                      </div>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-slate-400">Grinding Tolerance:</span>
+                        <span className="text-emerald-400 font-mono">±0.002 mm OEM Spec</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
-              <div className="p-4 bg-slate-950/90 rounded-2xl border border-slate-800 text-xs space-y-2 text-left shadow-inner">
-                <div className="flex justify-between items-center"><span className="text-slate-300">Target Tools:</span> <span className="text-white font-medium">Carbide Drills, Endmills, Reamers</span></div>
-                <div className="flex justify-between items-center"><span className="text-slate-300">Grinding Tolerance:</span> <span className="text-act-red font-mono font-bold">±0.002mm OEM Spec</span></div>
+              {/* Technical Spec Summary */}
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-2.5 bg-slate-950/90 rounded-lg border border-slate-800">
+                  <span className="text-slate-400 block mb-0.5">Tolerance</span>
+                  <span className="font-mono font-bold text-act-red">±0.002 mm</span>
+                </div>
+                <div className="p-2.5 bg-slate-950/90 rounded-lg border border-slate-800">
+                  <span className="text-slate-400 block mb-0.5 font-sans">Quality</span>
+                  <span className="font-bold text-white">Zoller Inspected</span>
+                </div>
               </div>
+
             </div>
           </div>
 
-          {/* Copy Right matching Hero content */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center space-x-2.5 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
-              <Award className="w-4 h-4 text-act-red shrink-0" />
-              <span className="truncate">SAVE UP TO 60% TOOLING COSTS</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-              Restore Cutting Edge Sharpness & <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
-                Reduce Spindle Load.
-              </span>
+          {/* Right Column: Description */}
+          <div className="lg:col-span-7 space-y-4">
+            <h2 className="text-xl sm:text-3xl font-extrabold font-display text-white">
+              Precision CNC Resharpening
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Dull cutting edges cause excessive machine spindle load, poor surface finish, and premature tool breakage. Our resharpening service restores concentricity, rake angles, and flute finish to OEM standards.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              5-axis CNC regrinding for worn flutes, relief angles, and point geometries on Solid Carbide Drills, Endmills, and Reamers.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl flex items-start space-x-3 shadow-md backdrop-blur-sm">
-                <CheckCircle2 className="w-5 h-5 text-act-red shrink-0 mt-0.5" />
-                <span className="text-xs text-slate-200 font-medium">5-Axis CNC Flute & Relief Angle Regrinding</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-act-red shrink-0" />
+                <span className="text-slate-200 font-medium">5-Axis Flute &amp; Relief Regrinding</span>
               </div>
-              <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl flex items-start space-x-3 shadow-md backdrop-blur-sm">
-                <CheckCircle2 className="w-5 h-5 text-act-red shrink-0 mt-0.5" />
-                <span className="text-xs text-slate-200 font-medium">Point Angle Resharpening for Carbide Drills</span>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-act-red shrink-0" />
+                <span className="text-slate-200 font-medium">Carbide Drill Point Thinning</span>
+              </div>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-act-red shrink-0" />
+                <span className="text-slate-200 font-medium">Corner Radius Edge Honing</span>
+              </div>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-act-red shrink-0" />
+                <span className="text-slate-200 font-medium">100% Zoller Inspection</span>
               </div>
             </div>
 
             <button
               onClick={onOpenQuote}
-              className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 flex items-center space-x-3 cursor-pointer group transform active:scale-95"
+              className="px-5 py-2.5 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-xs font-bold rounded-lg shadow-md flex items-center space-x-2 cursor-pointer transform active:scale-95"
             >
-              <span>Book Resharpening Batch</span>
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <span>Request Resharpening Quote</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
         </div>
-      </section>
 
-      {/* Transition Device 2: Gradient Bleed Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-
-      {/* 3. Service 2: Tool Reconditioning */}
-      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Service 02: Geometric Profile Reconstruction */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center pt-6 border-t border-slate-800/80">
           
-          {/* Copy Left */}
-          <div className="lg:col-span-7 space-y-6 text-left order-2 lg:order-1">
-            <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
-              <Wrench className="w-4 h-4 text-amber-400" />
-              <span>GEOMETRIC PROFILE RESTORATION</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-              Complete Tool Reconditioning & <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-act-red">
-                Profile Modification.
-              </span>
+          <div className="lg:col-span-7 space-y-4 order-2 lg:order-1">
+            <h2 className="text-xl sm:text-3xl font-extrabold font-display text-white">
+              Tool Profile Modification
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              When tools suffer corner chipping or severe flank wear, simple regrinding isn't enough. Our complete reconditioning process includes cut-off of damaged sections, neck relief grinding, and custom step profiling.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Damaged tool cut-offs, neck relief grinding, and custom step tool conversions for heavily worn tools.
             </p>
 
-            <div className="space-y-3 pt-1">
-              <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl flex items-center space-x-3 shadow-md">
-                <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
-                <span className="text-xs text-slate-200 font-medium">Cut-off damaged tool ends & recreate fresh cutting face geometry</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span className="text-slate-200 font-medium">End Cut-off &amp; Face Recut</span>
               </div>
-              <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl flex items-center space-x-3 shadow-md">
-                <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
-                <span className="text-xs text-slate-200 font-medium">Modify endmill diameters or convert worn endmills into custom step tools</span>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span className="text-slate-200 font-medium">Custom Step Conversion</span>
+              </div>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span className="text-slate-200 font-medium">Neck Relief Grinding</span>
+              </div>
+              <div className="p-2.5 bg-slate-900/90 border border-slate-800 rounded-lg flex items-center space-x-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span className="text-slate-200 font-medium">Runout ≤ 0.003mm</span>
               </div>
             </div>
 
             <button
               onClick={onOpenQuote}
-              className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 flex items-center space-x-3 cursor-pointer group transform active:scale-95"
+              className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-lg border border-slate-700 flex items-center space-x-2 cursor-pointer transform active:scale-95"
             >
-              <span>Inquire Tool Reconditioning</span>
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <span>Inquire Profile Modification</span>
+              <ArrowRight className="w-3.5 h-3.5 text-act-red" />
             </button>
           </div>
 
-          {/* Card Right */}
           <div className="lg:col-span-5 order-1 lg:order-2">
-            <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-8 space-y-6 shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-amber-500/50 transition-all duration-300 text-left">
-              <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/40 text-amber-400 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 transition-all">
-                <Wrench className="w-8 h-8" />
+            <div className="bg-slate-900/95 border border-slate-800 rounded-2xl p-5 space-y-4 shadow-xl backdrop-blur-xl hover:border-amber-500/50 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center">
+                <Wrench className="w-5 h-5" />
               </div>
-
-              <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-400">SERVICE 02</span>
-                <h3 className="text-2xl font-bold font-display text-white">Full Profile Reconstruction</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Extends tool life through structural regrinding, flute clearing, relief angle correction, and edge prep honing.
-                </p>
+              <div>
+                <h3 className="text-lg font-bold font-display text-white">Profile Modification Specs</h3>
               </div>
-
-              <div className="p-4 bg-slate-950/90 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2 shadow-inner">
-                <div className="flex justify-between items-center"><span className="text-slate-300">Runout Standard:</span> <span className="text-amber-400 font-mono font-bold">≤ 0.003mm</span></div>
-                <div className="flex justify-between items-center"><span className="text-slate-300">Turnaround:</span> <span className="text-white font-medium">24-48 Hours</span></div>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-2.5 bg-slate-950/90 rounded-lg border border-slate-800">
+                  <span className="text-slate-400 block mb-0.5">Runout</span>
+                  <span className="font-mono font-bold text-amber-400">≤ 0.003 mm</span>
+                </div>
+                <div className="p-2.5 bg-slate-950/90 rounded-lg border border-slate-800">
+                  <span className="text-slate-400 block mb-0.5">Quality</span>
+                  <span className="font-bold text-white">Optical Inspected</span>
+                </div>
               </div>
             </div>
           </div>
 
         </div>
+
+        {/* Service 03: Advanced PVD Hard Coatings */}
+        <div className="pt-6 border-t border-slate-800/80 space-y-6">
+          <div className="max-w-2xl space-y-2">
+            <h2 className="text-xl sm:text-3xl font-extrabold font-display text-white">
+              Advanced PVD Hard Coatings
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              PVD thermal barrier coatings to increase tool micro-hardness (up to 38 GPa) and lower friction coefficients.
+            </p>
+          </div>
+
+          {/* Structured PVD Coatings Comparison Table */}
+          <div className="border border-slate-800 rounded-xl overflow-hidden shadow-xl bg-slate-900/90 backdrop-blur-xl">
+            <div className="p-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between flex-wrap gap-2 text-xs">
+              <div className="flex items-center space-x-2">
+                <Layers className="w-4 h-4 text-act-red" />
+                <span className="font-bold font-display text-white">PVD Coating Specification Comparison</span>
+              </div>
+              <span className="font-mono text-slate-400 text-[11px]">Film Thickness: 2.0 – 4.0 µm</span>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs text-slate-300">
+                <thead className="bg-slate-950/80 text-slate-400 font-mono uppercase border-b border-slate-800 text-[11px]">
+                  <tr>
+                    <th className="py-2.5 px-3 font-bold text-white">Coating</th>
+                    <th className="py-2.5 px-3 font-bold text-white">Best For</th>
+                    <th className="py-2.5 px-3 font-bold text-white">Max Temp</th>
+                    <th className="py-2.5 px-3 font-bold text-white">Key Benefit</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60 font-sans">
+                  {pvdCoatings.map((c, idx) => (
+                    <tr key={idx} className="hover:bg-slate-800/40 transition-colors">
+                      <td className="py-3 px-3 whitespace-nowrap">
+                        <span className={`px-2 py-0.5 rounded text-xs font-mono font-bold border ${c.badgeColor}`}>
+                          {c.name}
+                        </span>
+                      </td>
+                      <td className="py-3 px-3 font-medium text-slate-200">{c.bestFor}</td>
+                      <td className="py-3 px-3 font-mono font-bold text-act-red whitespace-nowrap">{c.maxTemp}</td>
+                      <td className="py-3 px-3 text-slate-300">{c.benefit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
       </section>
 
-      {/* Transition Device 3: Glowing Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-act-red/40 to-transparent"></div>
 
-      {/* 4. Service 3: PVD / CVD Multi-Layer Hard Coating */}
-      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-12 relative z-10">
-        <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
-            <Layers className="w-4 h-4 text-act-red" />
-            <span>SERVICE 03 • ADVANCED PVD HARD COATINGS</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
-            PVD Hard Coating Matrix <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
-              (TiAlN / AlTiN / nACo / DLC).
-            </span>
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-            We apply industry-standard Physical Vapor Deposition (PVD) thermal barrier coatings to enhance surface micro-hardness (up to 3500 HV) and lower coefficient of friction during high-speed dry machining.
-          </p>
-        </div>
-
-        {/* 3-Card Coating Matrix matching Hero showcase cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          
-          <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-6 space-y-4 hover:border-act-red/50 transition-all duration-300 shadow-2xl backdrop-blur-xl group">
-            <div className="w-12 h-12 rounded-xl bg-act-red/10 border border-act-red/30 text-act-red flex items-center justify-center group-hover:bg-act-red group-hover:text-white transition-all">
-              <Zap className="w-6 h-6" />
-            </div>
-            <h4 className="text-lg font-bold text-white font-display">AlTiN Coating</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Designed for high-heat milling of Hardened Steels up to 65 HRC. Withstands thermal breakdown up to 900°C.
-            </p>
-            <span className="inline-block text-[11px] font-mono text-act-red font-semibold bg-act-red/10 px-2.5 py-1 rounded">
-              Max Temp: 900°C
-            </span>
-          </div>
-
-          <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-6 space-y-4 hover:border-blue-500/50 transition-all duration-300 shadow-2xl backdrop-blur-xl group">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <h4 className="text-lg font-bold text-white font-display">TiAlN Coating</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              General-purpose titanium aluminum nitride coating for Stainless Steel, Mild Steel, and Alloy machining.
-            </p>
-            <span className="inline-block text-[11px] font-mono text-blue-400 font-semibold bg-blue-500/10 px-2.5 py-1 rounded">
-              General Purpose
-            </span>
-          </div>
-
-          <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-6 space-y-4 hover:border-amber-500/50 transition-all duration-300 shadow-2xl backdrop-blur-xl group">
-            <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 transition-all">
-              <Layers className="w-6 h-6" />
-            </div>
-            <h4 className="text-lg font-bold text-white font-display">nACo & DLC Coating</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Nanocomposite nACo for Titanium & Inconel superalloys. DLC (Diamond-Like Carbon) for non-ferrous aluminum.
-            </p>
-            <span className="inline-block text-[11px] font-mono text-amber-400 font-semibold bg-amber-500/10 px-2.5 py-1 rounded">
-              Superalloys & Aluminum
-            </span>
-          </div>
-
-        </div>
-
-        <div className="pt-2 text-center">
-          <button
-            onClick={onOpenQuote}
-            className="px-8 py-4 bg-gradient-to-r from-act-red to-act-red-dark hover:from-act-red-light hover:to-act-red text-white text-base font-bold rounded-xl transition-all shadow-xl shadow-act-red/25 flex items-center justify-center space-x-3 cursor-pointer group transform active:scale-95 mx-auto"
-          >
-            <span>Request Custom Coating Batch Quote</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
-        </div>
-      </section>
 
     </div>
   );

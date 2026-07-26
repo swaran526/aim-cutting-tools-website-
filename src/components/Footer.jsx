@@ -49,7 +49,7 @@ export default function Footer({ onOpenQuote }) {
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li><Link to="/" className="hover:text-act-red transition-colors inline-block">Home Page</Link></li>
               <li><Link to="/about" className="hover:text-act-red transition-colors inline-block">About ACT Company</Link></li>
-              <li><Link to="/products" className="hover:text-act-red transition-colors inline-block">Products Catalog (14)</Link></li>
+              <li><Link to="/products" className="hover:text-act-red transition-colors inline-block">Products Catalog</Link></li>
               <li><Link to="/services" className="hover:text-act-red transition-colors inline-block">Resharpening & Coating</Link></li>
               <li><Link to="/contact" className="hover:text-act-red transition-colors inline-block">Factory Location & Map</Link></li>
             </ul>
@@ -70,7 +70,7 @@ export default function Footer({ onOpenQuote }) {
               ))}
               <li>
                 <Link to="/products" className="text-act-red font-bold hover:underline flex items-center space-x-1 pt-1 text-xs">
-                  <span>Browse All 14 Categories →</span>
+                  <span>Browse All Categories →</span>
                 </Link>
               </li>
             </ul>

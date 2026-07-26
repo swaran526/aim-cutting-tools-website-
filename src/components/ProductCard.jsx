@@ -6,9 +6,11 @@ export default function ProductCard({ product, onOpenQuote }) {
   return (
     <div className="bg-slate-900 border border-slate-800/90 rounded-2xl overflow-hidden hover:border-act-red/60 hover:shadow-2xl hover:shadow-act-red/20 transition-all duration-300 flex flex-col group h-full shadow-xl shadow-black/50 hover:-translate-y-1">
       
-      {/* Card Image Header */}
-      <div className="relative bg-slate-950 p-6 flex items-center justify-center min-h-[220px] overflow-hidden border-b border-slate-800/80">
-        
+      {/* Card Image Header - Clickable Link */}
+      <Link 
+        to={`/products/${product.slug}`}
+        className="relative bg-slate-950 p-6 flex items-center justify-center min-h-[220px] overflow-hidden border-b border-slate-800/80 cursor-pointer group/img block"
+      >
         {/* Background Grid Watermark */}
         <div className="absolute inset-0 opacity-10 tech-grid-bg"></div>
 
@@ -16,17 +18,19 @@ export default function ProductCard({ product, onOpenQuote }) {
         <img 
           src={product.image} 
           alt={`${product.name} - AIM CUTTING TOOLS`}
-          className="w-full max-h-48 object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-[0_10px_15px_rgba(227,30,36,0.15)]"
+          className="w-full max-h-48 object-contain transform group-hover/img:scale-105 group-hover:scale-105 transition-transform duration-500 filter drop-shadow-[0_10px_15px_rgba(227,30,36,0.15)]"
         />
-      </div>
+      </Link>
 
       {/* Card Body */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         
         <div className="space-y-2">
-          <h3 className="text-lg font-bold font-display text-white group-hover:text-act-red transition-colors line-clamp-1">
-            {product.name}
-          </h3>
+          <Link to={`/products/${product.slug}`}>
+            <h3 className="text-lg font-bold font-display text-white group-hover:text-act-red transition-colors line-clamp-1 hover:underline">
+              {product.name}
+            </h3>
+          </Link>
           <p className="text-xs text-slate-300 leading-relaxed line-clamp-2">
             {product.shortDescription}
           </p>

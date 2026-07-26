@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 import productsData from '../data/products.json';
 import { Search, Filter, Wrench, Package, Layers, ArrowRight } from 'lucide-react';
 
-export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CNC Product Taxonomy (14 Categories)", showFilters = true }) {
+export default function ProductGrid({ onOpenQuote, limit = null, title = "Our Tooling Catalog", showFilters = true, showTitle = true }) {
   const [activeType, setActiveType] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -21,22 +21,20 @@ export default function ProductGrid({ onOpenQuote, limit = null, title = "Our CN
   const displayProducts = limit ? filteredProducts.slice(0, limit) : filteredProducts;
 
   return (
-    <section className="py-10 sm:py-16 bg-slate-950 text-slate-100 font-sans tech-grid-bg relative overflow-hidden">
-      
-      {/* Radial Ambient Red Lighting Glow matching other homepage sections */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-act-red/10 rounded-full filter blur-[140px] pointer-events-none"></div>
-
+    <section className="py-3 sm:py-5 bg-slate-950 text-slate-100 font-sans tech-grid-bg relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center flex flex-col items-center justify-center mb-10 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white">
-            {title}
-          </h2>
-          <p className="text-slate-300 text-sm mt-3 leading-relaxed max-w-2xl">
-            From precision Solid Carbide Round Tools to VMC accessories, tool holders, and metrology instruments.
-          </p>
-        </div>
+        {showTitle && title && (
+          <div className="text-center flex flex-col items-center justify-center mb-6 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-white">
+              {title}
+            </h2>
+            <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed max-w-2xl">
+              From precision Solid Carbide Round Tools to VMC accessories, tool holders, and metrology instruments.
+            </p>
+          </div>
+        )}
 
         {/* Search and Category Filters Bar */}
         {showFilters && (

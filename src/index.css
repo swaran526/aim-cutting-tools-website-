@@ -342,27 +342,23 @@ input[type="email"].text-white {
   max-width: 1440px !important;
 }
 
-/* 10. Global Spacing Reductions for Page Hero Sections (Tighten Top Margins below sticky Header) */
+/* 10. Global Spacing Reductions for Page Hero Sections (Tighten Top & Bottom Margins below sticky Header) */
 main section.relative.bg-slate-950.text-center {
-  padding-top: 2.5rem !important;
-  /* Reduce from pt-16 (64px) to pt-10 (40px) */
-  padding-bottom: 3.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 main .bg-slate-950.min-h-screen {
-  padding-top: 2.5rem !important;
-  /* Reduce from pt-12 (48px) to pt-10 (40px) */
+  padding-top: 1.5rem !important;
 }
 
 @media (min-width: 640px) {
   main section.relative.bg-slate-950.text-center {
-    padding-top: 3.5rem !important;
-    /* Reduce from pt-24 (96px) to pt-14 (56px) */
-    padding-bottom: 4.5rem !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
   }
 
   main .bg-slate-950.min-h-screen {
-    padding-top: 3.5rem !important;
-    /* Reduce from pt-20 (80px) to pt-14 (56px) */
+    padding-top: 2rem !important;
   }
 }

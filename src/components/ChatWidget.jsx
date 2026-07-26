@@ -81,7 +81,7 @@ export default function ChatWidget({ onOpenQuote }) {
       onOpenQuote(tool);
       setIsOpen(false);
     } else if (actionType === 'whatsapp') {
-      const msg = `Hi ACT Technical Sales, I would like a quote for ${tool.name} (Tolerances: ${tool.specs?.["Shank Tolerance"] || 'Micron H6'}, Material: ${tool.specs?.["Substrate Grade"] || 'Sub-micron Carbide'}).`;
+      const msg = `Hi ACT Technical Sales, I would like a quote for ${tool.name} (${tool.category}).`;
       window.open(`https://wa.me/91${companyData.contact.phonePrimary}?text=${encodeURIComponent(msg)}`, '_blank');
     }
   };
@@ -183,7 +183,7 @@ export default function ChatWidget({ onOpenQuote }) {
                         {msg.tool.name}
                       </span>
                       <span className="text-[10px] font-mono font-semibold bg-act-red/20 text-act-red border border-act-red/30 px-2 py-0.5 rounded-md">
-                        {msg.tool.type || 'Precision Tool'}
+                        {msg.tool.category || 'Carbide Tooling'}
                       </span>
                     </div>
 
@@ -191,20 +191,18 @@ export default function ChatWidget({ onOpenQuote }) {
                       {msg.tool.shortDescription}
                     </p>
 
-                    <div className="grid grid-cols-2 gap-1.5 text-[10px] bg-slate-950/80 p-2 rounded-xl border border-slate-800 font-mono">
-                      <div>
-                        <span className="text-slate-400 block">Tolerance:</span>
-                        <span className="text-white font-bold">{msg.tool.specs?.["Shank Tolerance"] || '±0.002mm ISO H6'}</span>
+                    {msg.tool.applications && msg.tool.applications.length > 0 && (
+                      <div className="text-[10px] bg-slate-950/80 p-2 rounded-xl border border-slate-800 space-y-1">
+                        <span className="text-slate-400 block font-semibold">Recommended Workpiece Materials:</span>
+                        <div className="flex flex-wrap gap-1">
+                          {msg.tool.applications.map((app, i) => (
+                            <span key={i} className="text-slate-200 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+                              ✓ {app}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div>
-                        <span className="text-slate-400 block">Material:</span>
-                        <span className="text-amber-400 font-bold">{msg.tool.specs?.["Substrate Grade"] || 'Sub-micron Carbide'}</span>
-                      </div>
-                      <div className="col-span-2 pt-1 border-t border-slate-800/80">
-                        <span className="text-slate-400 block">Coating:</span>
-                        <span className="text-emerald-400 font-bold">{msg.tool.specs?.["Coating Options"] || 'AlTiN / TiAlN PVD'}</span>
-                      </div>
-                    </div>
+                    )}
 
                     {/* Action Buttons for Selected Tool */}
                     <div className="grid grid-cols-2 gap-2 pt-1">
