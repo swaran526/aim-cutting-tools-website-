@@ -21,7 +21,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden h-full flex flex-col">
+    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-8 shadow-2xl relative overflow-hidden h-full flex flex-col">
       
       {submitted ? (
         <div className="py-12 text-center space-y-6 animate-fadeIn">
@@ -50,7 +50,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-5 text-left flex flex-col flex-1">
           
           <div className="space-y-1 border-b border-slate-800 pb-4">
-            <h3 className="text-2xl font-bold font-display text-white flex items-center gap-2">
+            <h3 className="text-xl sm:text-2xl font-bold font-display text-white flex items-center gap-2">
               <Wrench className="w-5 h-5 text-act-red" />
               <span>Send Tooling Inquiry</span>
             </h3>

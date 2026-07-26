@@ -16,7 +16,7 @@ export default function Contact({ onOpenQuote }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-3">
 
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] tracking-tight text-white">
             Connect With ACT. <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-act-red via-red-500 to-amber-500">
               Get Tooling Support.
@@ -39,7 +39,7 @@ export default function Contact({ onOpenQuote }) {
           {/* Left Column: Direct Plant Contact Cards matching Hero showcase cards */}
           <div className="lg:col-span-5 text-left flex flex-col">
 
-            <div className="bg-slate-900/95 border border-slate-800/90 rounded-3xl p-5 shadow-2xl backdrop-blur-xl group hover:border-act-red/50 transition-all duration-300 flex flex-col flex-1">
+            <div className="bg-slate-900/95 border border-slate-800/90 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-2xl backdrop-blur-xl group hover:border-act-red/50 transition-all duration-300 flex flex-col flex-1">
 
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div className="flex items-center space-x-2">
@@ -113,7 +113,7 @@ export default function Contact({ onOpenQuote }) {
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left space-y-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
-            <h3 className="text-2xl font-bold font-display text-white">Find Our Workshop in Peenya 2nd Stage</h3>
+            <h3 className="text-xl sm:text-2xl font-bold font-display text-white">Find Our Workshop in Peenya 2nd Stage</h3>
           </div>
           <a
             href={companyData.contact.googleMapsUrl}
@@ -129,7 +129,7 @@ export default function Contact({ onOpenQuote }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
 
           {/* Left Column: Map Embed */}
-          <div className="industrial-card lg:h-[460px] h-96 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 relative">
+          <div className="industrial-card lg:h-[460px] h-64 sm:h-96 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 relative">
             <iframe
               title="AIM CUTTING TOOLS Peenya Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.039247654321!2d77.5134!3d13.0321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAxJzU1LjYiTiA3N8KwMzA0OC4yIkU!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
@@ -142,8 +142,8 @@ export default function Contact({ onOpenQuote }) {
             ></iframe>
           </div>
 
-          {/* Right Column: Dispatch Details Card — exact same classes as left contact card */}
-          <div className="industrial-card lg:h-[460px] bg-slate-900/95 border border-slate-800/90 rounded-3xl p-8 shadow-2xl backdrop-blur-xl flex flex-col justify-between">
+          {/* Right Column: Dispatch Details Card */}
+          <div className="industrial-card lg:h-[460px] bg-slate-900/95 border border-slate-800/90 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl backdrop-blur-xl flex flex-col justify-between">
 
             {/* Header — exact match to left card header */}
             <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-2">

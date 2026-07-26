@@ -102,7 +102,7 @@ export default function Header({ onOpenQuote }) {
                 e.target.src = "/assets/images/logo.png";
               }}
             />
-            <span className="text-base sm:text-2xl font-black font-display tracking-tight leading-none whitespace-nowrap logo-text-gradient">
+            <span className="text-sm sm:text-xl md:text-2xl font-black font-display tracking-tight leading-none whitespace-nowrap logo-text-gradient">
               AIM CUTTING TOOLS
             </span>
           </Link>

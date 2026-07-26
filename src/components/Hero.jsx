@@ -28,9 +28,9 @@ export default function Hero({ onOpenQuote }) {
           <div className="lg:col-span-6 space-y-6 text-left flex flex-col justify-between">
 
             {/* Trust Badge */}
-            <div className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md self-start whitespace-nowrap">
+            <div className="inline-flex items-center space-x-2 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md self-start max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
               <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse shrink-0"></span>
-              <span className="text-slate-300">EST. 2016 • PEENYA 2ND STAGE, BANGALORE</span>
+              <span className="text-slate-300 truncate">EST. 2016 • PEENYA 2ND STAGE, BANGALORE</span>
             </div>
 
             {/* Headline */}
@@ -118,7 +118,7 @@ export default function Hero({ onOpenQuote }) {
           </div>
 
           {/* Hero Right Interactive Showcase Card */}
-          <div className="lg:col-span-6 relative w-full h-[580px] sm:h-[620px] lg:h-full flex flex-col group/card">
+          <div className="lg:col-span-6 relative w-full h-[400px] sm:h-[540px] lg:h-full flex flex-col group/card">
 
             {/* Soft Outer Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-act-red/10 to-blue-500/10 rounded-[28px] blur-xl opacity-60 transition duration-1000"></div>

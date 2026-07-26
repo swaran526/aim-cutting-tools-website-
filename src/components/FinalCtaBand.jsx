@@ -9,9 +9,9 @@ export default function FinalCtaBand({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
         
         {/* Trust Badge matching Hero */}
-        <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md">
-          <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse"></span>
-          <span className="text-slate-300">PEENYA BANGALORE CUTTING TOOLS MANUFACTURER</span>
+        <div className="inline-flex items-center space-x-2.5 px-3.5 sm:px-4 py-1.5 bg-slate-900/90 border border-slate-700/80 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-200 shadow-lg backdrop-blur-md max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+          <span className="w-2.5 h-2.5 rounded-full bg-act-red animate-pulse shrink-0"></span>
+          <span className="text-slate-300 truncate">PEENYA BANGALORE CUTTING TOOLS MANUFACTURER</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] tracking-tight max-w-4xl mx-auto text-white">
